@@ -611,7 +611,14 @@ const fortunes = [
     item: "隠しページ",
     phrase: "管理人多忙",
     comment: "凶でも平成サイトならネタになります。"
-  }
+  },
+
+  {
+  title: "同盟",
+  url: "union.html",
+  description: "好きなものをバナーで主張する、平成サイト風の同盟ページです。",
+  tags: ["UNION", "同盟", "バナー", "主張", "平成"]
+}
 ];
 
 function setupFortune() {
@@ -631,3 +638,83 @@ function setupFortune() {
 }
 
 setupFortune();
+
+const unionForm = document.getElementById("unionForm");
+const unionName = document.getElementById("unionName");
+const unionLike = document.getElementById("unionLike");
+const unionMemberList = document.getElementById("unionMemberList");
+
+const UNION_MEMBER_KEY = "zeroRoomUnionMembers";
+
+function getUnionMembers() {
+  const membersJson = localStorage.getItem(UNION_MEMBER_KEY);
+
+  if (!membersJson) {
+    return [];
+  }
+
+  try {
+    return JSON.parse(membersJson);
+  } catch {
+    return [];
+  }
+}
+
+function saveUnionMembers(members) {
+  localStorage.setItem(UNION_MEMBER_KEY, JSON.stringify(members));
+}
+
+function renderUnionMembers() {
+  if (!unionMemberList) return;
+
+  const members = getUnionMembers();
+
+  if (members.length === 0) {
+    unionMemberList.innerHTML = `<p class="small">まだ参加者はいません。</p>`;
+    return;
+  }
+
+  unionMemberList.innerHTML = members
+    .map((member) => {
+      return `
+        <div class="union-member">
+          <span><strong>名前：</strong>${escapeHtml(member.name)}</span>
+          <span><strong>同盟：</strong>${escapeHtml(member.like)}</span>
+        </div>
+      `;
+    })
+    .join("");
+}
+
+function setupUnionForm() {
+  if (!unionForm || !unionName || !unionLike) return;
+
+  unionForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = unionName.value.trim() || "通りすがり";
+    const like = unionLike.value.trim();
+
+    if (!like) {
+      alert("参加したい同盟を書いてね");
+      return;
+    }
+
+    const members = getUnionMembers();
+
+    members.unshift({
+      name,
+      like
+    });
+
+    saveUnionMembers(members.slice(0, 20));
+    renderUnionMembers();
+
+    unionName.value = "";
+    unionLike.value = "";
+  });
+
+  renderUnionMembers();
+}
+
+setupUnionForm();
