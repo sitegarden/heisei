@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>占い - ZERO'S ROOM</title>
+  <meta name="description" content="ZERO'S ROOMの占いページです。" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page-bg fortune-bg">
+    <div class="site-wrap fortune-wrap">
+
+      <header class="site-header fortune-header">
+        <p class="welcome">＼ 今日の運勢 ／</p>
+        <h1>FORTUNE</h1>
+        <p class="subtitle">平成サイトにありがちな占いコーナー</p>
+      </header>
+
+      <nav class="global-nav">
+        <a href="home.html">HOME</a>
+        <a href="first.html">FIRST</a>
+        <a href="profile.html">PROFILE</a>
+        <a href="diary.html">DIARY</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="link.html">LINK</a>
+        <a href="mail.html">MAIL</a>
+        <a href="ranking.html">RANKING</a>
+        <a href="search.html">SEARCH</a>
+        <a href="history.html">HISTORY</a>
+        <a href="sozai.html">SOZAI</a>
+        <a href="annex.html">ANNEX</a>
+        <a href="warehouse.html">WAREHOUSE</a>
+        <a href="fortune.html">FORTUNE</a>
+        <a href="index.html">ENTER</a>
+      </nav>
+
+      <main class="layout">
+        <aside class="side-box">
+          <section class="box">
+            <h2>占いメニュー</h2>
+            <ul class="menu-list">
+              <li><a href="#omikuji">おみくじ</a></li>
+              <li><a href="#lucky">ラッキーアイテム</a></li>
+              <li><a href="#word">今日のひとこと</a></li>
+            </ul>
+          </section>
+
+          <section class="box">
+            <h2>注意</h2>
+            <p>
+              これはお遊び占いです。<br>
+              当たっても外れても平成の味です。
+            </p>
+          </section>
+        </aside>
+
+        <section class="main-box">
+
+          <section class="box fortune-section" id="omikuji">
+            <h2>おみくじ</h2>
+            <p>ボタンを押すと、今日の運勢が出ます。</p>
+
+            <div class="fortune-card">
+              <div id="fortuneResult" class="fortune-result">？？？</div>
+              <p id="fortuneText">まだ占っていません。</p>
+              <button id="fortuneButton" class="fortune-button" type="button">占う</button>
+            </div>
+          </section>
+
+          <section class="box fortune-section" id="lucky">
+            <h2>ラッキーアイテム</h2>
+
+            <div class="lucky-grid">
+              <div>
+                <span>ラッキーカラー</span>
+                <strong id="luckyColor">---</strong>
+              </div>
+              <div>
+                <span>ラッキーアイテム</span>
+                <strong id="luckyItem">---</strong>
+              </div>
+              <div>
+                <span>ラッキーワード</span>
+                <strong id="luckyPhrase">---</strong>
+              </div>
+            </div>
+          </section>
+
+          <section class="box fortune-section" id="word">
+            <h2>今日のひとこと</h2>
+
+            <div class="owner-comment">
+              <p id="fortuneComment">
+                占いボタンを押すと、管理人っぽい謎コメントが出ます。
+              </p>
+            </div>
+          </section>
+
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="home.html">本館に戻る</a></p>
+        <p>© ZERO'S ROOM</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
