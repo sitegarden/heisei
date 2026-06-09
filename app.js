@@ -443,6 +443,13 @@ const sitePages = [
   url: "sozai.html",
   description: "背景、ライン、アイコン、バナー素材風のページです。",
   tags: ["SOZAI", "素材", "背景", "バナー", "アイコン"]
+},
+
+  {
+  title: "別館",
+  url: "annex.html",
+  description: "本館に置ききれない雑メモ、倉庫、ミニ企画を置く別館ページです。",
+  tags: ["ANNEX", "別館", "倉庫", "雑メモ", "ミニ企画"]
 }
 ];
 
