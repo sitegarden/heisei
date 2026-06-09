@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>サイト内検索 - ZERO'S ROOM</title>
+  <meta name="description" content="ZERO'S ROOMのサイト内検索風ページです。" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page-bg">
+    <div class="site-wrap">
+
+      <header class="site-header">
+        <p class="welcome">＼ サイト内検索 ／</p>
+        <h1>SEARCH</h1>
+        <p class="subtitle">キーワードでページを探す風</p>
+      </header>
+
+      <nav class="global-nav">
+        <a href="home.html">HOME</a>
+        <a href="first.html">FIRST</a>
+        <a href="profile.html">PROFILE</a>
+        <a href="diary.html">DIARY</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="link.html">LINK</a>
+        <a href="mail.html">MAIL</a>
+        <a href="ranking.html">RANKING</a>
+        <a href="search.html">SEARCH</a>
+        <a href="index.html">ENTER</a>
+      </nav>
+
+      <main class="layout">
+        <aside class="side-box">
+          <section class="box">
+            <h2>検索のヒント</h2>
+            <ul class="menu-list">
+              <li>日記</li>
+              <li>プロフィール</li>
+              <li>イラスト</li>
+              <li>リンク</li>
+              <li>メール</li>
+              <li>平成</li>
+            </ul>
+          </section>
+
+          <section class="box">
+            <h2>注意</h2>
+            <p>
+              これはサイト内検索風のお遊びです。<br>
+              登録してあるページだけ検索できます。
+            </p>
+          </section>
+        </aside>
+
+        <section class="main-box">
+
+          <section class="box">
+            <h2>検索フォーム</h2>
+
+            <form id="searchForm" class="site-search-form">
+              <input id="searchInput" type="search" placeholder="キーワードを入力" />
+              <button type="submit">検索する</button>
+            </form>
+
+            <p id="searchStatus" class="small"></p>
+          </section>
+
+          <section class="box">
+            <h2>検索結果</h2>
+            <div id="searchResults" class="search-results"></div>
+          </section>
+
+          <section class="box">
+            <h2>登録ページ一覧</h2>
+            <div class="search-page-list">
+              <a href="home.html">本館</a>
+              <a href="first.html">はじめに</a>
+              <a href="profile.html">プロフィール</a>
+              <a href="diary.html">日記</a>
+              <a href="gallery.html">ギャラリー</a>
+              <a href="link.html">リンク集</a>
+              <a href="mail.html">メール</a>
+              <a href="ranking.html">ランキング</a>
+            </div>
+          </section>
+
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="home.html">本館に戻る</a></p>
+        <p>© ZERO'S ROOM</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
