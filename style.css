@@ -1052,3 +1052,132 @@ a:hover {
     display: block;
   }
 }
+
+.ranking-mini-banner {
+  display: grid;
+  place-items: center;
+  min-height: 34px;
+  margin-bottom: 8px;
+  padding: 5px;
+  border: 2px solid #ff75bd;
+  background: linear-gradient(90deg, #ff9ad1, #fff3a8, #a8f3ff);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 0 #b00070;
+}
+
+.vote-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.vote-button {
+  padding: 8px 10px;
+  border: 2px outset #ffc0df;
+  background: linear-gradient(#ffffff, #ffe1f2);
+  color: #d01883;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.vote-button:hover {
+  border-style: inset;
+  background: #fff7ce;
+}
+
+.ranking-list {
+  display: grid;
+  gap: 8px;
+}
+
+.ranking-item {
+  display: grid;
+  grid-template-columns: 46px 1fr 70px;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border: 2px dashed #ffafd8;
+  background: #fff8fc;
+}
+
+.ranking-item-rank {
+  display: grid;
+  place-items: center;
+  height: 36px;
+  border: 2px ridge #ffa6d3;
+  background: #fff7ce;
+  color: #ff1493;
+  font-weight: bold;
+}
+
+.ranking-item-name {
+  color: #d01883;
+  font-weight: bold;
+}
+
+.ranking-item-count {
+  text-align: right;
+  color: #8a6b84;
+  font-size: 13px;
+}
+
+.ranking-site-list {
+  display: grid;
+  gap: 10px;
+}
+
+.ranking-site-card {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 10px;
+  padding: 10px;
+  border: 3px ridge #ffa6d3;
+  background:
+    linear-gradient(rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
+    repeating-linear-gradient(
+      -45deg,
+      #ffe8f5,
+      #ffe8f5 8px,
+      #e9fbff 8px,
+      #e9fbff 16px
+    );
+}
+
+.rank-number {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid #ff75bd;
+  background: #fff7ce;
+  color: #ff1493;
+  font-weight: bold;
+}
+
+.ranking-site-card h3 {
+  margin: 0 0 5px;
+  color: #d01883;
+}
+
+.ranking-site-card p {
+  margin: 0 0 6px;
+}
+
+@media (max-width: 760px) {
+  .vote-list {
+    grid-template-columns: 1fr;
+  }
+
+  .ranking-item {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .ranking-item-count {
+    grid-column: 2;
+    text-align: left;
+  }
+}
