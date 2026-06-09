@@ -450,6 +450,13 @@ const sitePages = [
   url: "annex.html",
   description: "本館に置ききれない雑メモ、倉庫、ミニ企画を置く別館ページです。",
   tags: ["ANNEX", "別館", "倉庫", "雑メモ", "ミニ企画"]
+},
+
+  {
+  title: "倉庫",
+  url: "warehouse.html",
+  description: "古いバナー、没ページ案、謎メモ、がらくたを置く倉庫ページです。",
+  tags: ["WAREHOUSE", "倉庫", "没", "古いバナー", "がらくた"]
 }
 ];
 
