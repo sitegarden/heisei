@@ -375,3 +375,123 @@ function setupVoting() {
 }
 
 setupVoting();
+
+const searchForm = document.getElementById("searchForm");
+const searchInput = document.getElementById("searchInput");
+const searchResults = document.getElementById("searchResults");
+const searchStatus = document.getElementById("searchStatus");
+
+const sitePages = [
+  {
+    title: "本館",
+    url: "home.html",
+    description: "ZERO'S ROOMのメインページ。更新履歴、BBS、ギャラリー入口があります。",
+    tags: ["HOME", "本館", "更新履歴", "BBS", "平成"]
+  },
+  {
+    title: "はじめに",
+    url: "first.html",
+    description: "このサイトについて、注意事項、閲覧環境を書いたページです。",
+    tags: ["FIRST", "はじめに", "注意", "説明"]
+  },
+  {
+    title: "プロフィール",
+    url: "profile.html",
+    description: "管理人ゼロのプロフィールページです。",
+    tags: ["PROFILE", "プロフィール", "管理人", "ゼロ"]
+  },
+  {
+    title: "日記",
+    url: "diary.html",
+    description: "管理人の日記ログです。月別にゆるく記録しています。",
+    tags: ["DIARY", "日記", "ログ", "気分"]
+  },
+  {
+    title: "ギャラリー",
+    url: "gallery.html",
+    description: "イラスト、バナー、制作物を置く作品部屋です。",
+    tags: ["GALLERY", "ギャラリー", "イラスト", "作品", "バナー"]
+  },
+  {
+    title: "リンク集",
+    url: "link.html",
+    description: "リンクフリー、相互リンク、88×31風バナーのページです。",
+    tags: ["LINK", "リンク", "相互リンク", "バナー"]
+  },
+  {
+    title: "メール",
+    url: "mail.html",
+    description: "管理人にメール風、Web拍手風のページです。",
+    tags: ["MAIL", "メール", "拍手", "Web拍手"]
+  },
+  {
+    title: "ランキング",
+    url: "ranking.html",
+    description: "平成サイトにありがちなランキング参加中っぽいページです。",
+    tags: ["RANKING", "ランキング", "投票", "応援"]
+  }
+];
+
+function renderSearchResults(results) {
+  if (!searchResults) return;
+
+  if (results.length === 0) {
+    searchResults.innerHTML = `<p class="small">該当するページは見つかりませんでした。</p>`;
+    return;
+  }
+
+  searchResults.innerHTML = results
+    .map((page) => {
+      return `
+        <article class="search-result-card">
+          <h3><a href="${page.url}">${escapeHtml(page.title)}</a></h3>
+          <p>${escapeHtml(page.description)}</p>
+          <div class="search-tags">
+            ${page.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function searchSitePages(keyword) {
+  const normalizedKeyword = keyword.trim().toLowerCase();
+
+  if (!normalizedKeyword) {
+    return sitePages;
+  }
+
+  return sitePages.filter((page) => {
+    const text = [
+      page.title,
+      page.url,
+      page.description,
+      ...page.tags
+    ].join(" ").toLowerCase();
+
+    return text.includes(normalizedKeyword);
+  });
+}
+
+function setupSiteSearch() {
+  if (!searchForm || !searchInput) return;
+
+  renderSearchResults(sitePages);
+
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const keyword = searchInput.value;
+    const results = searchSitePages(keyword);
+
+    renderSearchResults(results);
+
+    if (searchStatus) {
+      const label = keyword.trim() || "全件";
+      searchStatus.textContent = `「${label}」の検索結果：${results.length}件`;
+    }
+  });
+}
+
+setupSiteSearch();
