@@ -1573,3 +1573,57 @@ a:hover {
 .tiny-secret-link:hover {
   color: #ff1493;
 }
+
+.notfound-bg {
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.85) 2px, transparent 3px),
+    linear-gradient(135deg, #dff8ff, #fff6bd 45%, #ffe6f4);
+  background-size: 24px 24px, 100% 100%;
+}
+
+.notfound-header {
+  background:
+    linear-gradient(90deg, #a8f3ff, #fff3a8, #ffb6dd);
+}
+
+.notfound-box {
+  text-align: center;
+}
+
+.notfound-face {
+  margin: 12px 0;
+  font-size: clamp(36px, 9vw, 72px);
+  color: #d01883;
+  font-weight: bold;
+}
+
+.notfound-message {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 2px dashed #ff75bd;
+  background: #fff7ce;
+  color: #d01883;
+  font-weight: bold;
+}
+
+.notfound-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.notfound-links a {
+  padding: 8px 14px;
+  border: 2px outset #ffc0df;
+  background: linear-gradient(#ffffff, #ffe1f2);
+  color: #d01883;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.notfound-links a:hover {
+  border-style: inset;
+  background: #fff7ce;
+}
