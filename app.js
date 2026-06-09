@@ -39,6 +39,8 @@ const navLinks = [
 
   { label: "UNION", url: "union.html" },
   { label: "SOZAI", url: "sozai.html" },
+  { label: "CSS", url: "css.html" },
+  
   { label: "CHARACTER", url: "character.html" },
   { label: "STAFF", url: "staff.html" },
   { label: "CAT", url: "cat.html" },
@@ -694,6 +696,12 @@ const sitePages = [
   url: "cat.html",
   description: "くーちゃんとごまちゃんを紹介する猫スタッフページです。",
   tags: ["CAT", "猫", "くーちゃん", "ごまちゃん", "ペット", "猫スタッフ"]
+},
+  {
+  title: "CSSメモ",
+  url: "css.html",
+  description: "増えすぎたCSSのメモ、装飾パーツ、自分用ルールをまとめたページです。",
+  tags: ["CSS", "デザイン", "装飾", "メモ", "平成"]
 },
 ];
 
