@@ -1627,3 +1627,93 @@ a:hover {
   border-style: inset;
   background: #fff7ce;
 }
+
+.annex-bg {
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.9) 2px, transparent 3px),
+    linear-gradient(135deg, #fff6bd, #ffe6f4 45%, #e8f7ff);
+  background-size: 24px 24px, 100% 100%;
+}
+
+.annex-wrap {
+  border-color: #ffb347;
+  box-shadow: 0 0 22px rgba(255, 179, 71, 0.45);
+}
+
+.annex-header {
+  background:
+    linear-gradient(90deg, #ffb347, #ffef9f, #ffb6dd);
+  border-bottom-color: #ffb347;
+}
+
+.annex-section p {
+  line-height: 1.8;
+}
+
+.memo-paper {
+  padding: 14px;
+  border: 2px dashed #ffb347;
+  background:
+    linear-gradient(#fffdf0 31px, #ffe6a8 32px);
+  background-size: 100% 32px;
+  color: #5b3b55;
+}
+
+.memo-paper p {
+  margin: 0 0 8px;
+}
+
+.warehouse-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.warehouse-item {
+  display: grid;
+  place-items: center;
+  min-height: 70px;
+  padding: 8px;
+  border: 3px ridge #ffb347;
+  background: #fffdf0;
+  color: #d01883;
+  font-weight: bold;
+  text-align: center;
+}
+
+.mini-project-list {
+  display: grid;
+  gap: 10px;
+}
+
+.mini-project-list article {
+  padding: 12px;
+  border: 2px dashed #ffafd8;
+  background: #fff8fc;
+}
+
+.mini-project-list h3 {
+  margin: 0 0 8px;
+  color: #d01883;
+}
+
+.annex-button {
+  padding: 7px 14px;
+  border: 2px outset #ffc0df;
+  background: linear-gradient(#ffffff, #ffe1f2);
+  color: #d01883;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.annex-button:hover {
+  border-style: inset;
+  background: #fff7ce;
+}
+
+@media (max-width: 760px) {
+  .warehouse-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
