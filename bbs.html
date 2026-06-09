@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>掲示板 - ZERO'S ROOM</title>
+  <meta name="description" content="ZERO'S ROOMの掲示板風ページです。" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page-bg bbs-page-bg">
+    <div class="site-wrap bbs-wrap">
+
+      <header class="site-header bbs-header">
+        <p class="welcome">＼ 書き込み歓迎 ／</p>
+        <h1>BBS</h1>
+        <p class="subtitle">平成サイトに欠かせない掲示板</p>
+      </header>
+
+      <nav class="global-nav">
+        <a href="home.html">HOME</a>
+        <a href="first.html">FIRST</a>
+        <a href="profile.html">PROFILE</a>
+        <a href="diary.html">DIARY</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="link.html">LINK</a>
+        <a href="mail.html">MAIL</a>
+        <a href="ranking.html">RANKING</a>
+        <a href="search.html">SEARCH</a>
+        <a href="history.html">HISTORY</a>
+        <a href="sozai.html">SOZAI</a>
+        <a href="annex.html">ANNEX</a>
+        <a href="warehouse.html">WAREHOUSE</a>
+        <a href="fortune.html">FORTUNE</a>
+        <a href="union.html">UNION</a>
+        <a href="question.html">QUESTION</a>
+        <a href="game.html">GAME</a>
+        <a href="bbs.html">BBS</a>
+        <a href="index.html">ENTER</a>
+      </nav>
+
+      <main class="layout">
+        <aside class="side-box">
+          <section class="box">
+            <h2>掲示板ルール</h2>
+            <ul class="menu-list">
+              <li>荒らし禁止</li>
+              <li>連投はほどほどに</li>
+              <li>平成の心を忘れない</li>
+              <li>管理人はたぶん喜びます</li>
+            </ul>
+          </section>
+
+          <section class="box">
+            <h2>注意</h2>
+            <p>
+              この掲示板はローカル保存です。<br>
+              自分の端末にだけ残ります。
+            </p>
+          </section>
+        </aside>
+
+        <section class="main-box">
+
+          <section class="box">
+            <h2>書き込みフォーム</h2>
+
+            <form id="bbsForm" class="bbs-form">
+              <input id="bbsName" type="text" placeholder="なまえ" maxlength="20" />
+              <input id="bbsTitle" type="text" placeholder="タイトル" maxlength="30" />
+              <textarea id="bbsMessage" placeholder="メッセージを書いてね" maxlength="300"></textarea>
+              <button type="submit">書きこむ</button>
+            </form>
+
+            <p class="small">
+              ※投稿はこの端末だけに保存されます。
+            </p>
+          </section>
+
+          <section class="box">
+            <h2>掲示板ログ</h2>
+            <div id="bbsList" class="bbs-list"></div>
+          </section>
+
+          <section class="box">
+            <h2>管理人より</h2>
+            <div class="owner-comment">
+              <p>
+                掲示板って、今見るとかなり不思議な文化。<br>
+                でも「ここに来た人が何か残していく」感じがあって良い。
+              </p>
+            </div>
+          </section>
+
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="home.html">本館に戻る</a></p>
+        <p>© ZERO'S ROOM</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
