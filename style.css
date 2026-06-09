@@ -1717,3 +1717,102 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.warehouse-bg {
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.86) 2px, transparent 3px),
+    linear-gradient(135deg, #fff7ce, #f0e4ff 45%, #ffe6f4);
+  background-size: 24px 24px, 100% 100%;
+}
+
+.warehouse-wrap {
+  border-color: #c99cff;
+  box-shadow: 0 0 22px rgba(201, 156, 255, 0.42);
+}
+
+.warehouse-header {
+  background:
+    linear-gradient(90deg, #c99cff, #fff3a8, #ffb6dd);
+  border-bottom-color: #c99cff;
+}
+
+.warehouse-section p {
+  line-height: 1.8;
+}
+
+.old-banner-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.old-banner {
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 31px;
+  border: 2px solid #fff;
+  outline: 1px solid #8a6b84;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #5b3b55;
+}
+
+.old-pink {
+  background: linear-gradient(90deg, #ff75bd, #ffc4e4);
+}
+
+.old-blue {
+  background: linear-gradient(90deg, #73d6ff, #dff8ff);
+}
+
+.old-yellow {
+  background: linear-gradient(90deg, #ffd84d, #ffb347);
+}
+
+.old-purple {
+  background: linear-gradient(90deg, #8b5cc2, #c99cff);
+}
+
+.scrap-list {
+  display: grid;
+  gap: 10px;
+}
+
+.scrap-list article {
+  padding: 10px;
+  border: 2px dashed #c99cff;
+  background: #fffaff;
+}
+
+.scrap-list h3 {
+  margin: 0 0 6px;
+  color: #8b5cc2;
+}
+
+.scrap-list p {
+  margin: 0;
+}
+
+.junk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+
+.junk-grid div {
+  display: grid;
+  place-items: center;
+  min-height: 64px;
+  border: 3px ridge #c99cff;
+  background: #fffaff;
+  color: #8b5cc2;
+  font-weight: bold;
+}
+
+@media (max-width: 760px) {
+  .junk-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
