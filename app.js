@@ -654,6 +654,40 @@ const sitePages = [
   description: "昔の日記、更新履歴、メモをまとめる過去ログページです。",
   tags: ["OLD", "過去ログ", "ログ", "保管庫", "古い記録"]
 },
+   {
+  title: "音楽",
+  url: "music.html",
+  description: "好きな音楽、作業BGM、気分別BGMをまとめた音楽ページです。",
+  tags: ["MUSIC", "音楽", "BGM", "作業BGM", "曲", "プレイリスト"]
+},
+
+{
+  title: "MIDI置き場",
+  url: "midi.html",
+  description: "BGMや音源を置ける、平成サイト風のMIDI置き場ページです。",
+  tags: ["MIDI", "BGM", "音源", "音楽", "素材"]
+},
+
+{
+  title: "看板キャラ",
+  url: "character.html",
+  description: "ZERO'S ROOMの看板キャラ、案内人を紹介するページです。",
+  tags: ["CHARACTER", "看板キャラ", "案内人", "マスコット", "キャラ"]
+},
+
+{
+  title: "スタッフ紹介",
+  url: "staff.html",
+  description: "管理人、案内人、猫スタッフ、サポート係を紹介するスタッフ紹介風ページです。",
+  tags: ["STAFF", "スタッフ", "管理人", "案内人", "猫", "サポート"]
+},
+
+{
+  title: "企画",
+  url: "event.html",
+  description: "記念企画、お題配布、配布物風、過去企画をまとめたイベントページです。",
+  tags: ["EVENT", "企画", "イベント", "お題", "配布", "記念企画"]
+},
 ];
 
 function renderSearchResults(results) {
