@@ -242,3 +242,107 @@ a:hover {
     border-width: 3px;
   }
 }
+
+.union-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.union-banner {
+  display: grid;
+  place-items: center;
+  min-height: 38px;
+  padding: 6px;
+  border: 2px solid #ff75bd;
+  background:
+    linear-gradient(90deg, #ff9ad1, #fff3a8, #a8f3ff);
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 0 #b00070;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.8);
+}
+
+.bbs-form {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.bbs-form input,
+.bbs-form textarea,
+.owner-memo {
+  width: 100%;
+  padding: 8px;
+  border: 2px inset #ffafd8;
+  background: #fffaff;
+  color: #5b3b55;
+  font-family: inherit;
+}
+
+.bbs-form textarea,
+.owner-memo {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.bbs-form button,
+.memo-button {
+  justify-self: start;
+  padding: 6px 14px;
+  border: 2px outset #ffc0df;
+  background: linear-gradient(#ffffff, #ffe1f2);
+  color: #d01883;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.bbs-form button:hover,
+.memo-button:hover {
+  background: #fff7ce;
+}
+
+.bbs-item {
+  margin-top: 8px;
+  padding: 10px;
+  border: 2px dashed #ffafd8;
+  background: #fff8fc;
+}
+
+.bbs-item-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+  color: #d01883;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.bbs-item p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.kiriban-message {
+  margin-top: 10px;
+  padding: 8px;
+  border: 2px dashed #ff1493;
+  background: #fff7ce;
+  color: #ff1493;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .union-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bbs-item-header {
+    display: block;
+  }
+}
