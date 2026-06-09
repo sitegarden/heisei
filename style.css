@@ -3940,3 +3940,142 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.css-bg {
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.9) 2px, transparent 3px),
+    linear-gradient(135deg, #f0e4ff, #ffe6f4 45%, #e8f7ff);
+  background-size: 24px 24px, 100% 100%;
+}
+
+.css-wrap {
+  border-color: #8b5cc2;
+  box-shadow: 0 0 22px rgba(139, 92, 194, 0.42);
+}
+
+.css-header {
+  background:
+    linear-gradient(90deg, #8b5cc2, #ffb6dd, #73d6ff);
+  border-bottom-color: #8b5cc2;
+}
+
+.css-header h1 {
+  color: #fff3a8;
+  text-shadow:
+    2px 2px 0 #8b5cc2,
+    4px 4px 0 #ff75bd;
+}
+
+.css-section p {
+  line-height: 1.8;
+}
+
+.css-memo-list {
+  display: grid;
+  gap: 10px;
+}
+
+.css-memo-list article {
+  padding: 10px;
+  border: 2px dashed #c99cff;
+  background: #fffaff;
+}
+
+.css-memo-list h3 {
+  margin: 0 0 6px;
+  color: #8b5cc2;
+}
+
+.css-memo-list p {
+  margin: 0;
+}
+
+.css-memo-list code {
+  padding: 2px 5px;
+  border: 1px solid #c99cff;
+  background: #fff7ce;
+  color: #8b5cc2;
+}
+
+.css-parts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 9px;
+  margin-bottom: 12px;
+}
+
+.css-sample {
+  display: grid;
+  place-items: center;
+  min-height: 80px;
+  background: #fffaff;
+  color: #8b5cc2;
+  font-weight: bold;
+}
+
+.sample-ridge {
+  border: 4px ridge #c99cff;
+}
+
+.sample-double {
+  border: 4px double #ff75bd;
+}
+
+.sample-dashed {
+  border: 3px dashed #73d6ff;
+}
+
+.sample-inset {
+  border: 4px inset #ffa6d3;
+}
+
+.css-line-demo {
+  height: 18px;
+  margin: 10px 0;
+  border: 1px solid #fff;
+  outline: 1px solid #8b5cc2;
+  background: repeating-linear-gradient(
+    90deg,
+    #8b5cc2,
+    #8b5cc2 10px,
+    #ffb6dd 10px,
+    #ffb6dd 20px,
+    #73d6ff 20px,
+    #73d6ff 30px
+  );
+}
+
+.css-rule-box {
+  padding: 12px;
+  border: 2px dashed #c99cff;
+  background: #fffaff;
+}
+
+.css-rule-box p {
+  margin: 5px 0;
+}
+
+.css-todo-list {
+  display: grid;
+  gap: 8px;
+}
+
+.css-todo-list label {
+  display: block;
+  padding: 9px;
+  border: 2px dashed #c99cff;
+  background: #fffaff;
+  color: #5b3b55;
+  font-weight: bold;
+}
+
+.css-todo-list input {
+  margin-right: 8px;
+  accent-color: #8b5cc2;
+}
+
+@media (max-width: 760px) {
+  .css-parts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
