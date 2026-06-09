@@ -2735,3 +2735,55 @@ a:hover {
   color: #d01883;
   font-weight: bold;
 }
+
+.map-bg {
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.9) 2px, transparent 3px),
+    linear-gradient(135deg, #fff6bd, #e8f7ff 45%, #ffe6f4);
+  background-size: 24px 24px, 100% 100%;
+}
+
+.map-wrap {
+  border-color: #ffb347;
+  box-shadow: 0 0 22px rgba(255, 179, 71, 0.45);
+}
+
+.map-header {
+  background:
+    linear-gradient(90deg, #ffb347, #a8f3ff, #ffb6dd);
+  border-bottom-color: #ffb347;
+}
+
+.map-section p {
+  line-height: 1.8;
+}
+
+.map-link-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+
+.map-link-grid a {
+  display: grid;
+  place-items: center;
+  min-height: 44px;
+  padding: 8px;
+  border: 2px outset #ffc0df;
+  background: linear-gradient(#ffffff, #ffe1f2);
+  color: #d01883;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+
+.map-link-grid a:hover {
+  border-style: inset;
+  background: #fff7ce;
+}
+
+@media (max-width: 760px) {
+  .map-link-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
