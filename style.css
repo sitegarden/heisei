@@ -908,3 +908,33 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.first-section p {
+  line-height: 1.8;
+}
+
+.warning-list {
+  display: grid;
+  gap: 8px;
+  padding-left: 1.4em;
+}
+
+.warning-list li {
+  padding: 8px;
+  border: 2px dashed #ffafd8;
+  background: #fff8fc;
+}
+
+.view-box {
+  padding: 12px;
+  border: 3px ridge #ffa6d3;
+  background:
+    linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+    repeating-linear-gradient(
+      -45deg,
+      #ffe8f5,
+      #ffe8f5 8px,
+      #e9fbff 8px,
+      #e9fbff 16px
+    );
+}
