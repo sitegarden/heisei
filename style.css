@@ -3003,3 +3003,86 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.memo-bg {
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.9) 2px, transparent 3px),
+    linear-gradient(135deg, #e8f7ff, #ffe6f4 45%, #fff6bd);
+  background-size: 24px 24px, 100% 100%;
+}
+
+.memo-wrap {
+  border-color: #73d6ff;
+  box-shadow: 0 0 22px rgba(115, 214, 255, 0.42);
+}
+
+.memo-header {
+  background:
+    linear-gradient(90deg, #73d6ff, #ffb6dd, #fff3a8);
+  border-bottom-color: #73d6ff;
+}
+
+.memo-section p {
+  line-height: 1.8;
+}
+
+.memo-log-list {
+  display: grid;
+  gap: 9px;
+}
+
+.memo-log-list article {
+  padding: 10px;
+  border: 2px dashed #ffafd8;
+  background:
+    linear-gradient(rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
+    repeating-linear-gradient(
+      -45deg,
+      #e9fbff,
+      #e9fbff 8px,
+      #ffe8f5 8px,
+      #ffe8f5 16px
+    );
+}
+
+.memo-log-list span {
+  display: inline-block;
+  margin-bottom: 6px;
+  padding: 3px 8px;
+  border: 1px dashed #ff75bd;
+  background: #fff7ce;
+  color: #d01883;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.memo-log-list p {
+  margin: 0;
+}
+
+.free-memo {
+  width: 100%;
+  min-height: 140px;
+  padding: 10px;
+  border: 2px inset #ffafd8;
+  background: #fffaff;
+  color: #5b3b55;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.memo-save-button {
+  margin-top: 8px;
+  padding: 8px 16px;
+  border: 2px outset #ffc0df;
+  background: linear-gradient(#ffffff, #ffe1f2);
+  color: #d01883;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.memo-save-button:hover {
+  border-style: inset;
+  background: #fff7ce;
+}
