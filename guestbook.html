@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>足あと帳 - ZERO'S ROOM</title>
+  <meta name="description" content="ZERO'S ROOMの足あと帳ページです。" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page-bg guestbook-bg">
+    <div class="site-wrap guestbook-wrap">
+
+      <header class="site-header guestbook-header">
+        <p class="welcome">＼ 来訪記念 ／</p>
+        <h1>GUESTBOOK</h1>
+        <p class="subtitle">来たよ、の足あとを残すページ</p>
+      </header>
+
+      <nav class="global-nav">
+        <a href="home.html">HOME</a>
+        <a href="first.html">FIRST</a>
+        <a href="profile.html">PROFILE</a>
+        <a href="diary.html">DIARY</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="link.html">LINK</a>
+        <a href="mail.html">MAIL</a>
+        <a href="ranking.html">RANKING</a>
+        <a href="search.html">SEARCH</a>
+        <a href="history.html">HISTORY</a>
+        <a href="sozai.html">SOZAI</a>
+        <a href="annex.html">ANNEX</a>
+        <a href="warehouse.html">WAREHOUSE</a>
+        <a href="fortune.html">FORTUNE</a>
+        <a href="union.html">UNION</a>
+        <a href="question.html">QUESTION</a>
+        <a href="game.html">GAME</a>
+        <a href="bbs.html">BBS</a>
+        <a href="clap.html">CLAP</a>
+        <a href="guestbook.html">GUESTBOOK</a>
+        <a href="index.html">ENTER</a>
+      </nav>
+
+      <main class="layout">
+        <aside class="side-box">
+          <section class="box">
+            <h2>足あと帳</h2>
+            <p>
+              来た記念に名前とひとことを残す風のページです。
+            </p>
+            <p class="small">
+              ※ローカル保存なので、自分の端末にだけ残ります。
+            </p>
+          </section>
+
+          <section class="box">
+            <h2>違い</h2>
+            <p>
+              BBS：会話っぽい<br>
+              足あと帳：来訪記録っぽい
+            </p>
+          </section>
+        </aside>
+
+        <section class="main-box">
+
+          <section class="box">
+            <h2>足あとを残す</h2>
+
+            <form id="guestbookForm" class="guestbook-form">
+              <input id="guestName" type="text" placeholder="お名前" maxlength="20" />
+              <input id="guestSite" type="text" placeholder="サイトURL 任意" maxlength="80" />
+              <textarea id="guestMessage" placeholder="ひとこと" maxlength="160"></textarea>
+              <button type="submit">足あとを残す</button>
+            </form>
+          </section>
+
+          <section class="box">
+            <h2>足あとログ</h2>
+            <div id="guestbookList" class="guestbook-list"></div>
+          </section>
+
+          <section class="box">
+            <h2>管理人より</h2>
+            <div class="owner-comment">
+              <p>
+                足あと帳って、BBSとはまた違う良さがある。<br>
+                「来たよ」だけを残していく感じ、かなり個人サイトっぽい。
+              </p>
+            </div>
+          </section>
+
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="home.html">本館に戻る</a></p>
+        <p>© ZERO'S ROOM</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
