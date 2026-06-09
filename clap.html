@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Web拍手 - ZERO'S ROOM</title>
+  <meta name="description" content="ZERO'S ROOMのWeb拍手風ページです。" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page-bg clap-bg">
+    <div class="site-wrap clap-wrap">
+
+      <header class="site-header clap-header">
+        <p class="welcome">＼ 拍手ありがとうございます ／</p>
+        <h1>CLAP</h1>
+        <p class="subtitle">平成サイトにありがちなWeb拍手</p>
+      </header>
+
+      <nav class="global-nav">
+        <a href="home.html">HOME</a>
+        <a href="first.html">FIRST</a>
+        <a href="profile.html">PROFILE</a>
+        <a href="diary.html">DIARY</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="link.html">LINK</a>
+        <a href="mail.html">MAIL</a>
+        <a href="ranking.html">RANKING</a>
+        <a href="search.html">SEARCH</a>
+        <a href="history.html">HISTORY</a>
+        <a href="sozai.html">SOZAI</a>
+        <a href="annex.html">ANNEX</a>
+        <a href="warehouse.html">WAREHOUSE</a>
+        <a href="fortune.html">FORTUNE</a>
+        <a href="union.html">UNION</a>
+        <a href="question.html">QUESTION</a>
+        <a href="game.html">GAME</a>
+        <a href="bbs.html">BBS</a>
+        <a href="clap.html">CLAP</a>
+        <a href="index.html">ENTER</a>
+      </nav>
+
+      <main class="layout">
+        <aside class="side-box">
+          <section class="box">
+            <h2>Web拍手とは</h2>
+            <p>
+              管理人に「見たよ」「よかったよ」を送る風のボタンです。
+            </p>
+            <p class="small">
+              ※実際には自分の端末にだけ保存されます。
+            </p>
+          </section>
+
+          <section class="box">
+            <h2>拍手数</h2>
+            <p id="clapCountText" class="clap-count-big">拍手：0回</p>
+          </section>
+        </aside>
+
+        <section class="main-box">
+
+          <section class="box clap-section">
+            <h2>拍手する</h2>
+
+            <div class="clap-card">
+              <div class="clap-icon">👏</div>
+
+              <p id="clapThanksText" class="clap-thanks-text">
+                よかったら拍手してね。
+              </p>
+
+              <button id="clapButton" class="clap-main-button" type="button">
+                拍手する
+              </button>
+            </div>
+          </section>
+
+          <section class="box">
+            <h2>お礼メッセージ</h2>
+
+            <div class="thanks-box">
+              <p id="clapRandomMessage">
+                拍手すると、お礼メッセージが変わります。
+              </p>
+            </div>
+          </section>
+
+          <section class="box">
+            <h2>管理人より</h2>
+
+            <div class="owner-comment">
+              <p>
+                Web拍手って、今思うとかなりかわいい文化。<br>
+                コメントがなくても、ボタンだけで「見たよ」が伝わる感じ。
+              </p>
+              <p>
+                こういう小さい交流、平成サイトっぽくて好き。
+              </p>
+            </div>
+          </section>
+
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="home.html">本館に戻る</a></p>
+        <p>© ZERO'S ROOM</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
