@@ -31,6 +31,8 @@
         <a href="#profile">PROFILE</a>
         <a href="#diary">DIARY</a>
         <a href="#gallery">GALLERY</a>
+        <a href="#union">UNION</a>
+        <a href="#bbs">BBS</a>
         <a href="#links">LINK</a>
       </nav>
 
@@ -102,6 +104,40 @@
             </div>
             <p class="small">ここにイラストとかサイトバナーを置けます。</p>
           </section>
+
+          <section class="box" id="union">
+  <h2>同盟</h2>
+  <p>好きなものをこっそり主張する平成文化。</p>
+
+  <div class="union-grid">
+    <div class="union-banner">猫が好き同盟</div>
+    <div class="union-banner">紅茶派同盟</div>
+    <div class="union-banner">個人サイト復活委員会</div>
+    <div class="union-banner">創作キャラ保護区</div>
+  </div>
+</section>
+
+<section class="box" id="bbs">
+  <h2>BBS</h2>
+  <p class="small">※これはお遊び用のローカル掲示板です。投稿は自分の端末にだけ保存されます。</p>
+
+  <form id="bbsForm" class="bbs-form">
+    <input id="bbsName" type="text" placeholder="なまえ" maxlength="20" />
+    <textarea id="bbsMessage" placeholder="ひとことどうぞ" maxlength="120"></textarea>
+    <button type="submit">書きこむ</button>
+  </form>
+
+  <div id="bbsList" class="bbs-list"></div>
+</section>
+
+<section class="box" id="memo">
+  <h2>管理人メモ</h2>
+  <p class="small">今日の気分や更新予定をメモできます。</p>
+
+  <textarea id="ownerMemo" class="owner-memo" placeholder="ここにメモを書く"></textarea>
+  <button id="saveMemoButton" class="memo-button">メモを保存</button>
+  <p id="memoStatus" class="small"></p>
+</section>
 
           <section class="box" id="links">
             <h2>LINK</h2>
