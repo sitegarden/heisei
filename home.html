@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>本館 - ZERO'S ROOM</title>
+  <meta name="description" content="ZERO'S ROOMの本館ページです。" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page-bg">
+    <div class="site-wrap">
+
+      <header class="site-header">
+        <p class="welcome">＼ ようこそ本館へ！ ／</p>
+        <h1>★ ZERO'S ROOM ★</h1>
+        <p class="subtitle">平成の風を感じる、ゆるおり秘密基地</p>
+
+        <div class="counter">
+          あなたは
+          <span id="visitorCount">000123</span>
+          人目のお客様です
+        </div>
+      </header>
+
+      <nav class="global-nav">
+        <a href="home.html">HOME</a>
+        <a href="diary.html">DIARY</a>
+        <a href="link.html">LINK</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="#bbs">BBS</a>
+        <a href="index.html">ENTER</a>
+      </nav>
+
+      <main class="layout">
+        <aside class="side-box">
+          <section class="box">
+            <h2>MENU</h2>
+            <ul class="menu-list">
+              <li>🌟 はじめに</li>
+              <li>🎨 作品置き場</li>
+              <li>☕ ひとこと日記</li>
+              <li>💌 相互リンク募集中</li>
+            </ul>
+          </section>
+
+          <section class="box">
+            <h2>PROFILE</h2>
+            <p>
+              名前：ゼロ<br>
+              好き：サイト作り・絵・音楽<br>
+              属性：平成個人サイトに惹かれし者
+            </p>
+          </section>
+
+          <section class="box mini">
+            <h2>BANNER</h2>
+            <div class="banner">ZERO'S ROOM</div>
+            <p class="small">※直リンク禁止っぽい雰囲気</p>
+          </section>
+        </aside>
+
+        <section class="main-box">
+          <section class="box hero">
+            <h2>ここはゼロの秘密基地です</h2>
+            <p>
+              ここは平成っぽいノリで作った、ゆるくて可愛い個人サイトです。<br>
+              日記、作品、好きなもの、リンクなどを自由に置いていく予定。
+            </p>
+            <p class="blink">★ ゆっくり見ていってね ★</p>
+          </section>
+
+          <section class="box">
+            <h2>更新履歴</h2>
+            <div class="news">
+              <p><span>2026/06/09</span> 本館ページを作りました。</p>
+              <p><span>2026/06/09</span> ENTERページを追加しました。</p>
+              <p><span>2026/06/09</span> 平成風サイト、開設。</p>
+            </div>
+          </section>
+
+          <section class="box" id="gallery">
+            <h2>GALLERY</h2>
+            <div class="gallery-grid">
+              <div>NO IMAGE</div>
+              <div>NO IMAGE</div>
+              <div>NO IMAGE</div>
+              <div>NO IMAGE</div>
+            </div>
+            <p class="small">ここにイラストとかサイトバナーを置けます。</p>
+          </section>
+
+          <section class="box" id="bbs">
+            <h2>BBS</h2>
+            <p class="small">※これはお遊び用のローカル掲示板です。投稿は自分の端末にだけ保存されます。</p>
+
+            <form id="bbsForm" class="bbs-form">
+              <input id="bbsName" type="text" placeholder="なまえ" maxlength="20" />
+              <textarea id="bbsMessage" placeholder="ひとことどうぞ" maxlength="120"></textarea>
+              <button type="submit">書きこむ</button>
+            </form>
+
+            <div id="bbsList" class="bbs-list"></div>
+          </section>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>荒らし・無断転載・直リンクはだめです。</p>
+        <p>© ZERO'S ROOM</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
