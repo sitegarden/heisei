@@ -432,6 +432,13 @@ const sitePages = [
   },
 
   {
+  title: "サイト内検索",
+  url: "search.html",
+  description: "ZERO'S ROOMのサイト内検索風ページです。登録ページをキーワードで探せます。",
+  tags: ["SEARCH", "検索", "サイト内検索", "ページ一覧"]
+},
+
+  {
   title: "更新履歴",
   url: "history.html",
   description: "ZERO'S ROOMの更新履歴ページです。サイトの増築記録をまとめています。",
@@ -465,6 +472,14 @@ const sitePages = [
   description: "おみくじ、ラッキーアイテム、今日のひとことを表示する占いページです。",
   tags: ["FORTUNE", "占い", "おみくじ", "ラッキーアイテム"]
 },
+
+  {
+  title: "同盟",
+  url: "union.html",
+  description: "好きなものをバナーで主張する、平成サイト風の同盟ページです。",
+  tags: ["UNION", "同盟", "バナー", "主張", "平成"]
+},
+  
   {
   title: "100の質問",
   url: "question.html",
