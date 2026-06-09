@@ -485,7 +485,14 @@ const sitePages = [
   url: "question.html",
   description: "管理人への100の質問風ページです。基本、サイト、好きなもの、自由回答があります。",
   tags: ["QUESTION", "質問", "100の質問", "管理人", "プロフィール"]
-}
+},
+
+  {
+  title: "ミニゲーム",
+  url: "game.html",
+  description: "星を集めるだけの平成サイト風ミニゲームページです。",
+  tags: ["GAME", "ゲーム", "ミニゲーム", "星", "スコア"]
+},
 ];
 
 function renderSearchResults(results) {
@@ -739,3 +746,103 @@ function setupUnionForm() {
 }
 
 setupUnionForm();
+
+const gameButton = document.getElementById("gameButton");
+const gameResetButton = document.getElementById("gameResetButton");
+const gameScore = document.getElementById("gameScore");
+const gameHighScore = document.getElementById("gameHighScore");
+const gameRank = document.getElementById("gameRank");
+const gameMessage = document.getElementById("gameMessage");
+const gameStar = document.getElementById("gameStar");
+const gameTitleText = document.getElementById("gameTitleText");
+
+const GAME_SCORE_KEY = "zeroRoomGameScore";
+const GAME_HIGH_SCORE_KEY = "zeroRoomGameHighScore";
+
+function getGameScore() {
+  return Number(localStorage.getItem(GAME_SCORE_KEY) || "0");
+}
+
+function getGameHighScore() {
+  return Number(localStorage.getItem(GAME_HIGH_SCORE_KEY) || "0");
+}
+
+function getGameRank(score) {
+  if (score >= 300) return "平成の星職人";
+  if (score >= 200) return "個人サイトの住人";
+  if (score >= 100) return "キリ番ハンター";
+  if (score >= 50) return "常連さん";
+  if (score >= 20) return "通りすがり卒業";
+  return "初心者";
+}
+
+function getGameMessage(score) {
+  if (score >= 300) return "ここまで押すとは、なかなかやるな。";
+  if (score >= 200) return "もう完全にこのサイトの住人です。";
+  if (score >= 100) return "キリ番を狙う才能があります。";
+  if (score >= 50) return "常連感が出てきました。";
+  if (score >= 20) return "だんだん楽しくなってきた頃です。";
+  return "星を集めよう。";
+}
+
+function renderGame() {
+  if (!gameScore) return;
+
+  const score = getGameScore();
+  const highScore = getGameHighScore();
+  const rank = getGameRank(score);
+
+  gameScore.textContent = score;
+
+  if (gameHighScore) {
+    gameHighScore.textContent = highScore;
+  }
+
+  if (gameRank) {
+    gameRank.textContent = rank;
+  }
+
+  if (gameTitleText) {
+    gameTitleText.textContent = rank;
+  }
+
+  if (gameMessage) {
+    gameMessage.textContent = getGameMessage(score);
+  }
+}
+
+function setupGame() {
+  if (!gameButton) return;
+
+  gameButton.addEventListener("click", () => {
+    const addPoint = Math.random() < 0.1 ? 10 : 1;
+    const nextScore = getGameScore() + addPoint;
+    const highScore = Math.max(nextScore, getGameHighScore());
+
+    localStorage.setItem(GAME_SCORE_KEY, String(nextScore));
+    localStorage.setItem(GAME_HIGH_SCORE_KEY, String(highScore));
+
+    if (gameStar) {
+      gameStar.classList.remove("pop");
+      void gameStar.offsetWidth;
+      gameStar.classList.add("pop");
+    }
+
+    if (gameMessage && addPoint === 10) {
+      gameMessage.textContent = "ラッキー！ 星が10個増えました。";
+    }
+
+    renderGame();
+  });
+
+  if (gameResetButton) {
+    gameResetButton.addEventListener("click", () => {
+      localStorage.setItem(GAME_SCORE_KEY, "0");
+      renderGame();
+    });
+  }
+
+  renderGame();
+}
+
+setupGame();
