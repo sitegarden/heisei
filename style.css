@@ -2261,3 +2261,91 @@ a:hover {
   background: #fff7ce;
   color: #d01883;
 }
+
+.clap-bg {
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.9) 2px, transparent 3px),
+    linear-gradient(135deg, #ffe6f4, #fff6bd 45%, #e8f7ff);
+  background-size: 24px 24px, 100% 100%;
+}
+
+.clap-wrap {
+  border-color: #ff75bd;
+  box-shadow: 0 0 22px rgba(255, 117, 189, 0.45);
+}
+
+.clap-header {
+  background:
+    linear-gradient(90deg, #ff75bd, #fff3a8, #a8f3ff);
+  border-bottom-color: #ff75bd;
+}
+
+.clap-count-big {
+  color: #d01883;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.clap-card {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 20px;
+  border: 3px ridge #ff75bd;
+  background:
+    linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+    repeating-linear-gradient(
+      -45deg,
+      #ffe8f5,
+      #ffe8f5 8px,
+      #e9fbff 8px,
+      #e9fbff 16px
+    );
+  text-align: center;
+}
+
+.clap-icon {
+  display: grid;
+  place-items: center;
+  width: 130px;
+  height: 130px;
+  border: 4px double #ff75bd;
+  border-radius: 50%;
+  background: #fff7ce;
+  font-size: 64px;
+  user-select: none;
+}
+
+.clap-icon.pop {
+  animation: clapPop 0.25s ease;
+}
+
+@keyframes clapPop {
+  50% {
+    transform: scale(1.15) rotate(-6deg);
+  }
+}
+
+.clap-thanks-text {
+  margin: 0;
+  padding: 8px 14px;
+  border: 2px dashed #ffafd8;
+  background: #fff8fc;
+  color: #d01883;
+  font-weight: bold;
+}
+
+.clap-main-button {
+  padding: 9px 22px;
+  border: 2px outset #ffc0df;
+  background: linear-gradient(#ffffff, #ffe1f2);
+  color: #d01883;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.clap-main-button:hover {
+  border-style: inset;
+  background: #fff7ce;
+}
