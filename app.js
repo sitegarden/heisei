@@ -552,6 +552,12 @@ const sitePages = [
   description: "管理人に拍手を送る風の平成サイト風Web拍手ページです。",
   tags: ["CLAP", "Web拍手", "拍手", "応援", "平成"]
 },
+  {
+  title: "ありがとう",
+  url: "thanks.html",
+  description: "来てくれてありがとう、拍手ありがとうを伝えるお礼ページです。",
+  tags: ["THANKS", "ありがとう", "お礼", "拍手", "来訪"]
+},
 ];
 
 function renderSearchResults(results) {
