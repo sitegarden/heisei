@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "MS PGothic", "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
+  color: #5b3b55;
+  background:
+    radial-gradient(circle at 10px 10px, rgba(255,255,255,0.9) 2px, transparent 3px),
+    linear-gradient(135deg, #ffe6f4, #e8f7ff 45%, #fff8d8);
+  background-size: 24px 24px, 100% 100%;
+}
+
+.page-bg {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.site-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  border: 4px double #ff8fc7;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 20px rgba(255, 128, 190, 0.45);
+}
+
+.site-header {
+  text-align: center;
+  padding: 28px 16px 20px;
+  background:
+    linear-gradient(90deg, #ffb6dd, #fff3a8, #b8f1ff, #ffb6dd);
+  border-bottom: 3px dotted #ff73b8;
+}
+
+.welcome {
+  margin: 0;
+  font-size: 18px;
+  color: #ff2f9a;
+  font-weight: bold;
+}
+
+h1 {
+  margin: 8px 0;
+  font-size: clamp(34px, 8vw, 64px);
+  color: #ff1493;
+  text-shadow:
+    2px 2px 0 #fff,
+    4px 4px 0 #8be9ff;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  margin: 8px 0 14px;
+  font-weight: bold;
+}
+
+.counter {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px inset #ff9ad1;
+  background: #fff;
+  color: #7d3b76;
+  font-weight: bold;
+}
+
+#visitorCount {
+  color: #ff1493;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.global-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+  background: #fff0fa;
+  border-bottom: 3px double #ff8fc7;
+}
+
+.global-nav a {
+  padding: 6px 12px;
+  border: 2px outset #ffc0df;
+  background: linear-gradient(#ffffff, #ffe1f2);
+  color: #d01883;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.global-nav a:hover {
+  border-style: inset;
+  background: #fff7ce;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 14px;
+  padding: 14px;
+}
+
+.box {
+  margin-bottom: 14px;
+  padding: 14px;
+  border: 3px ridge #ffa6d3;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.box h2 {
+  margin: -14px -14px 12px;
+  padding: 8px 12px;
+  font-size: 18px;
+  color: #fff;
+  background: linear-gradient(90deg, #ff5eb3, #ffa6d3);
+  border-bottom: 2px dotted #fff;
+}
+
+.hero {
+  text-align: center;
+  background:
+    linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+    repeating-linear-gradient(
+      -45deg,
+      #ffe8f5,
+      #ffe8f5 8px,
+      #e9fbff 8px,
+      #e9fbff 16px
+    );
+}
+
+.blink {
+  font-weight: bold;
+  color: #ff1493;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.menu-list,
+.link-list {
+  padding-left: 1.2em;
+  line-height: 1.9;
+}
+
+.news p {
+  margin: 8px 0;
+  padding: 6px;
+  border-bottom: 1px dashed #ffafd8;
+}
+
+.news span {
+  display: inline-block;
+  min-width: 100px;
+  color: #ff1493;
+  font-weight: bold;
+}
+
+.diary-box article {
+  padding: 12px;
+  background: #fff8fc;
+  border: 2px dashed #ffafd8;
+}
+
+.diary-box h3 {
+  margin-top: 0;
+  color: #d01883;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.gallery-grid div {
+  display: grid;
+  place-items: center;
+  min-height: 90px;
+  border: 2px dashed #ffa6d3;
+  background: #fff7ce;
+  color: #c06a9a;
+  font-weight: bold;
+}
+
+.banner {
+  display: grid;
+  place-items: center;
+  height: 40px;
+  border: 2px solid #ff1493;
+  background:
+    linear-gradient(90deg, #ff9ad1, #fff3a8, #99eeff);
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #b00070;
+}
+
+.small {
+  font-size: 12px;
+  color: #8a6b84;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 16px;
+  background: #fff0fa;
+  border-top: 3px double #ff8fc7;
+  font-size: 13px;
+}
+
+a {
+  color: #d01883;
+}
+
+a:hover {
+  color: #ff5eb3;
+}
+
+@media (max-width: 760px) {
+  .page-bg {
+    padding: 10px;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-wrap {
+    border-width: 3px;
+  }
+}
