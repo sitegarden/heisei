@@ -1474,3 +1474,102 @@ a:hover {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.hidden-bg {
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.7) 2px, transparent 3px),
+    linear-gradient(135deg, #2d1436, #4c2558 45%, #26152f);
+  background-size: 24px 24px, 100% 100%;
+}
+
+.hidden-wrap {
+  border-color: #c99cff;
+  box-shadow: 0 0 24px rgba(201, 156, 255, 0.55);
+}
+
+.hidden-header {
+  background:
+    linear-gradient(90deg, #4c2558, #8b5cc2, #4c2558);
+  border-bottom-color: #c99cff;
+}
+
+.hidden-header h1 {
+  color: #fff3a8;
+  text-shadow:
+    2px 2px 0 #4c2558,
+    4px 4px 0 #ff75bd;
+}
+
+.hidden-header .welcome,
+.hidden-header .subtitle {
+  color: #fff;
+}
+
+.secret-box {
+  text-align: center;
+  background:
+    linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+    repeating-linear-gradient(
+      -45deg,
+      #f0e4ff,
+      #f0e4ff 8px,
+      #ffe8f5 8px,
+      #ffe8f5 16px
+    );
+}
+
+.secret-message {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 18px;
+  border: 2px dashed #8b5cc2;
+  background: #fff7ce;
+  color: #8b5cc2;
+  font-weight: bold;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+.secret-banner-room {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.secret-banner {
+  display: grid;
+  place-items: center;
+  width: 200px;
+  height: 40px;
+  border: 2px solid #8b5cc2;
+  background:
+    linear-gradient(90deg, #4c2558, #ff75bd, #fff3a8);
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #2d1436;
+}
+
+.secret-back-link {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px outset #c99cff;
+  background: linear-gradient(#ffffff, #f0e4ff);
+  color: #8b5cc2;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.secret-back-link:hover {
+  border-style: inset;
+  background: #fff7ce;
+}
+
+.tiny-secret-link {
+  color: transparent;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.tiny-secret-link:hover {
+  color: #ff1493;
+}
