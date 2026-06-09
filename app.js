@@ -582,6 +582,12 @@ const sitePages = [
   description: "最近追加されたページやおすすめページ、お知らせをまとめた新着情報ページです。",
   tags: ["NEW", "新着", "最新", "お知らせ", "おすすめ"]
 },
+  {
+  title: "過去ログ",
+  url: "old.html",
+  description: "昔の日記、更新履歴、メモをまとめる過去ログページです。",
+  tags: ["OLD", "過去ログ", "ログ", "保管庫", "古い記録"]
+},
 ];
 
 function renderSearchResults(results) {
