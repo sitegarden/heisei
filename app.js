@@ -749,6 +749,13 @@ const fortunes = [
   description: "来訪記念に名前、サイトURL、ひとことを残す足あと帳ページです。",
   tags: ["GUESTBOOK", "足あと", "足あと帳", "来訪記念", "ゲストブック"]
 },
+
+  {
+  title: "ひとりごと",
+  url: "memo.html",
+  description: "日記にするほどでもない短文や、管理人のメモを置くページです。",
+  tags: ["MEMO", "ひとりごと", "メモ", "つぶやき", "短文"]
+},
   
 ];
 
@@ -1037,3 +1044,29 @@ function setupGuestbook() {
 }
 
 setupGuestbook();
+
+const freeMemo = document.getElementById("freeMemo");
+const freeMemoSaveButton = document.getElementById("freeMemoSaveButton");
+const freeMemoStatus = document.getElementById("freeMemoStatus");
+
+const FREE_MEMO_KEY = "zeroRoomFreeMemo";
+
+function setupFreeMemo() {
+  if (!freeMemo || !freeMemoSaveButton) return;
+
+  const savedMemo = localStorage.getItem(FREE_MEMO_KEY);
+
+  if (savedMemo) {
+    freeMemo.value = savedMemo;
+  }
+
+  freeMemoSaveButton.addEventListener("click", () => {
+    localStorage.setItem(FREE_MEMO_KEY, freeMemo.value);
+
+    if (freeMemoStatus) {
+      freeMemoStatus.textContent = "メモを保存しました。";
+    }
+  });
+}
+
+setupFreeMemo();
