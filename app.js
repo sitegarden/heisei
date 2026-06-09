@@ -705,7 +705,15 @@ const fortunes = [
   url: "union.html",
   description: "好きなものをバナーで主張する、平成サイト風の同盟ページです。",
   tags: ["UNION", "同盟", "バナー", "主張", "平成"]
-}
+},
+
+  {
+  title: "足あと帳",
+  url: "guestbook.html",
+  description: "来訪記念に名前、サイトURL、ひとことを残す足あと帳ページです。",
+  tags: ["GUESTBOOK", "足あと", "足あと帳", "来訪記念", "ゲストブック"]
+},
+  
 ];
 
 function setupFortune() {
@@ -905,3 +913,91 @@ function setupGame() {
 }
 
 setupGame();
+
+const guestbookForm = document.getElementById("guestbookForm");
+const guestName = document.getElementById("guestName");
+const guestSite = document.getElementById("guestSite");
+const guestMessage = document.getElementById("guestMessage");
+const guestbookList = document.getElementById("guestbookList");
+
+const GUESTBOOK_KEY = "zeroRoomGuestbook";
+
+function getGuestbookEntries() {
+  const entriesJson = localStorage.getItem(GUESTBOOK_KEY);
+
+  if (!entriesJson) {
+    return [];
+  }
+
+  try {
+    return JSON.parse(entriesJson);
+  } catch {
+    return [];
+  }
+}
+
+function saveGuestbookEntries(entries) {
+  localStorage.setItem(GUESTBOOK_KEY, JSON.stringify(entries));
+}
+
+function renderGuestbook() {
+  if (!guestbookList) return;
+
+  const entries = getGuestbookEntries();
+
+  if (entries.length === 0) {
+    guestbookList.innerHTML = `<p class="small">まだ足あとはありません。</p>`;
+    return;
+  }
+
+  guestbookList.innerHTML = entries
+    .map((entry) => {
+      const siteHtml = entry.site
+        ? `<a class="guestbook-site" href="${escapeHtml(entry.site)}">${escapeHtml(entry.site)}</a>`
+        : `<span class="guestbook-site">サイトなし</span>`;
+
+      return `
+        <article class="guestbook-item">
+          <div class="guestbook-item-header">
+            <span>${escapeHtml(entry.name)}</span>
+            <time>${escapeHtml(entry.date)}</time>
+          </div>
+          ${siteHtml}
+          <p>${escapeHtml(entry.message)}</p>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function setupGuestbook() {
+  if (!guestbookForm || !guestName || !guestSite || !guestMessage) return;
+
+  guestbookForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = guestName.value.trim() || "通りすがり";
+    const site = guestSite.value.trim();
+    const message = guestMessage.value.trim() || "来ました。";
+
+    const entries = getGuestbookEntries();
+
+    entries.unshift({
+      name,
+      site,
+      message,
+      date: new Date().toLocaleString("ja-JP")
+    });
+
+    saveGuestbookEntries(entries.slice(0, 30));
+    renderGuestbook();
+
+    guestName.value = "";
+    guestSite.value = "";
+    guestMessage.value = "";
+  });
+
+  renderGuestbook();
+}
+
+setupGuestbook();
