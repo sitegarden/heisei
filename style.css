@@ -2221,3 +2221,43 @@ a:hover {
   margin: 6px 0;
   font-weight: bold;
 }
+
+.bbs-page-bg {
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.9) 2px, transparent 3px),
+    linear-gradient(135deg, #ffe6f4, #e8f7ff 45%, #fff6bd);
+  background-size: 24px 24px, 100% 100%;
+}
+
+.bbs-wrap {
+  border-color: #ff75bd;
+  box-shadow: 0 0 22px rgba(255, 117, 189, 0.45);
+}
+
+.bbs-header {
+  background:
+    linear-gradient(90deg, #ff75bd, #a8f3ff, #fff3a8);
+  border-bottom-color: #ff75bd;
+}
+
+.bbs-item-title {
+  margin: 0 0 6px;
+  color: #d01883;
+  font-size: 16px;
+}
+
+.bbs-item-meta {
+  margin-bottom: 8px;
+  color: #8a6b84;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.bbs-item-number {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 2px 6px;
+  border: 1px dashed #ff75bd;
+  background: #fff7ce;
+  color: #d01883;
+}
