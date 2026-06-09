@@ -509,3 +509,35 @@ function setupSiteSearch() {
 }
 
 setupSiteSearch();
+
+const luckyWord = document.getElementById("luckyWord");
+const luckyButton = document.getElementById("luckyButton");
+
+const luckyWords = [
+  "キリ番",
+  "相互リンク",
+  "直リンク禁止",
+  "素材お借りしました",
+  "別館",
+  "隠しページ",
+  "Web拍手",
+  "掲示板",
+  "工事中",
+  "管理人多忙"
+];
+
+function showLuckyWord() {
+  if (!luckyWord) return;
+
+  const index = Math.floor(Math.random() * luckyWords.length);
+  luckyWord.textContent = `今日のワード：${luckyWords[index]}`;
+}
+
+function setupLuckyWord() {
+  if (!luckyButton) return;
+
+  luckyButton.addEventListener("click", showLuckyWord);
+  showLuckyWord();
+}
+
+setupLuckyWord();
