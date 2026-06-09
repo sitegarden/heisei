@@ -564,6 +564,12 @@ const sitePages = [
   description: "管理人の好きな飲み物、創作、サイト文化、好きな言葉をまとめたページです。",
   tags: ["FAVORITE", "好きなもの", "紅茶", "創作", "個人サイト"]
 },
+  {
+  title: "夢と予定",
+  url: "dream.html",
+  description: "管理人のやりたいこと、制作予定、目標をまとめたページです。",
+  tags: ["DREAM", "夢", "予定", "目標", "制作予定", "やりたいこと"]
+},
 ];
 
 function renderSearchResults(results) {
