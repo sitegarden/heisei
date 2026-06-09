@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ランキング - ZERO'S ROOM</title>
+  <meta name="description" content="ZERO'S ROOMのランキング風ページです。" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page-bg">
+    <div class="site-wrap">
+
+      <header class="site-header">
+        <p class="welcome">＼ ランキング参加中 ／</p>
+        <h1>RANKING</h1>
+        <p class="subtitle">平成サイトにありがちなランキング風ページ</p>
+      </header>
+
+      <nav class="global-nav">
+        <a href="home.html">HOME</a>
+        <a href="first.html">FIRST</a>
+        <a href="profile.html">PROFILE</a>
+        <a href="diary.html">DIARY</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="link.html">LINK</a>
+        <a href="mail.html">MAIL</a>
+        <a href="ranking.html">RANKING</a>
+        <a href="index.html">ENTER</a>
+      </nav>
+
+      <main class="layout">
+        <aside class="side-box">
+          <section class="box">
+            <h2>応援してね</h2>
+            <p>
+              気に入ったページに投票する風のコーナーです。
+            </p>
+            <p class="small">
+              ※実際にはランキングサイトへ送信されません。ローカル保存です。
+            </p>
+          </section>
+
+          <section class="box">
+            <h2>参加中っぽい</h2>
+            <div class="ranking-mini-banner">個人サイトRanking</div>
+            <div class="ranking-mini-banner">創作サイト同盟</div>
+            <div class="ranking-mini-banner">平成HPサーチ</div>
+          </section>
+        </aside>
+
+        <section class="main-box">
+
+          <section class="box">
+            <h2>推しページ投票</h2>
+            <p>
+              好きなページを押してね。<br>
+              管理人が勝手にニヤニヤする風。
+            </p>
+
+            <div class="vote-list">
+              <button class="vote-button" data-vote="HOME">HOMEに投票</button>
+              <button class="vote-button" data-vote="DIARY">DIARYに投票</button>
+              <button class="vote-button" data-vote="GALLERY">GALLERYに投票</button>
+              <button class="vote-button" data-vote="LINK">LINKに投票</button>
+              <button class="vote-button" data-vote="MAIL">MAILに投票</button>
+            </div>
+
+            <p id="voteStatus" class="small"></p>
+          </section>
+
+          <section class="box">
+            <h2>現在のランキング</h2>
+            <div id="rankingList" class="ranking-list"></div>
+          </section>
+
+          <section class="box">
+            <h2>おすすめサイト風</h2>
+
+            <div class="ranking-site-list">
+              <article class="ranking-site-card">
+                <span class="rank-number">01</span>
+                <div>
+                  <h3>ZERO'S ROOM</h3>
+                  <p>平成風の秘密基地。本館です。</p>
+                  <a href="home.html">見に行く</a>
+                </div>
+              </article>
+
+              <article class="ranking-site-card">
+                <span class="rank-number">02</span>
+                <div>
+                  <h3>GALLERY</h3>
+                  <p>イラストや制作物を置く部屋。</p>
+                  <a href="gallery.html">見に行く</a>
+                </div>
+              </article>
+
+              <article class="ranking-site-card">
+                <span class="rank-number">03</span>
+                <div>
+                  <h3>LINK</h3>
+                  <p>バナーとリンクの部屋。</p>
+                  <a href="link.html">見に行く</a>
+                </div>
+              </article>
+            </div>
+          </section>
+
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="home.html">本館に戻る</a></p>
+        <p>© ZERO'S ROOM</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
