@@ -293,3 +293,85 @@ function setupClapButton() {
 
 setupMailForm();
 setupClapButton();
+
+const voteButtons = document.querySelectorAll(".vote-button");
+const rankingList = document.getElementById("rankingList");
+const voteStatus = document.getElementById("voteStatus");
+
+const VOTE_KEY = "zeroRoomVotes";
+
+function getVotes() {
+  const votesJson = localStorage.getItem(VOTE_KEY);
+
+  if (!votesJson) {
+    return {
+      HOME: 0,
+      DIARY: 0,
+      GALLERY: 0,
+      LINK: 0,
+      MAIL: 0
+    };
+  }
+
+  try {
+    return JSON.parse(votesJson);
+  } catch {
+    return {
+      HOME: 0,
+      DIARY: 0,
+      GALLERY: 0,
+      LINK: 0,
+      MAIL: 0
+    };
+  }
+}
+
+function saveVotes(votes) {
+  localStorage.setItem(VOTE_KEY, JSON.stringify(votes));
+}
+
+function renderRanking() {
+  if (!rankingList) return;
+
+  const votes = getVotes();
+
+  const ranking = Object.entries(votes)
+    .sort((a, b) => b[1] - a[1]);
+
+  rankingList.innerHTML = ranking
+    .map(([name, count], index) => {
+      return `
+        <div class="ranking-item">
+          <div class="ranking-item-rank">${index + 1}</div>
+          <div class="ranking-item-name">${escapeHtml(name)}</div>
+          <div class="ranking-item-count">${count}票</div>
+        </div>
+      `;
+    })
+    .join("");
+}
+
+function setupVoting() {
+  if (!voteButtons.length) return;
+
+  voteButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const voteName = button.dataset.vote;
+      const votes = getVotes();
+
+      if (!voteName) return;
+
+      votes[voteName] = (votes[voteName] || 0) + 1;
+      saveVotes(votes);
+      renderRanking();
+
+      if (voteStatus) {
+        voteStatus.textContent = `${voteName}に投票した風です。`;
+      }
+    });
+  });
+
+  renderRanking();
+}
+
+setupVoting();
