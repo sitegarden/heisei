@@ -457,6 +457,13 @@ const sitePages = [
   url: "warehouse.html",
   description: "古いバナー、没ページ案、謎メモ、がらくたを置く倉庫ページです。",
   tags: ["WAREHOUSE", "倉庫", "没", "古いバナー", "がらくた"]
+},
+
+  {
+  title: "占い",
+  url: "fortune.html",
+  description: "おみくじ、ラッキーアイテム、今日のひとことを表示する占いページです。",
+  tags: ["FORTUNE", "占い", "おみくじ", "ラッキーアイテム"]
 }
 ];
 
@@ -555,3 +562,72 @@ function setupLuckyWord() {
 }
 
 setupLuckyWord();
+
+const fortuneButton = document.getElementById("fortuneButton");
+const fortuneResult = document.getElementById("fortuneResult");
+const fortuneText = document.getElementById("fortuneText");
+const luckyColor = document.getElementById("luckyColor");
+const luckyItem = document.getElementById("luckyItem");
+const luckyPhrase = document.getElementById("luckyPhrase");
+const fortuneComment = document.getElementById("fortuneComment");
+
+const fortunes = [
+  {
+    result: "大吉",
+    text: "今日は勢いで進むと良い日。やりたいことを増築しよう。",
+    color: "ピンク",
+    item: "紅茶",
+    phrase: "平成の風",
+    comment: "ノリで始めたことが一番楽しい日です。"
+  },
+  {
+    result: "中吉",
+    text: "ほどよく良い日。無理せず、好きなページをひとつ増やそう。",
+    color: "水色",
+    item: "お気に入りの画像",
+    phrase: "相互リンク",
+    comment: "地味な作業ほど、あとで効いてきます。"
+  },
+  {
+    result: "小吉",
+    text: "小さな更新が似合う日。CSSを少し足すくらいがちょうどいい。",
+    color: "黄色",
+    item: "メモ帳",
+    phrase: "工事中",
+    comment: "完成してなくても、置いてあるだけで味です。"
+  },
+  {
+    result: "吉",
+    text: "普通に良い日。迷ったら本館に戻りましょう。",
+    color: "白",
+    item: "バナー",
+    phrase: "直リンク禁止",
+    comment: "今日もサイトはちゃんと生きています。"
+  },
+  {
+    result: "凶",
+    text: "リンク切れに注意。でも404ページがあるから大丈夫。",
+    color: "紫",
+    item: "隠しページ",
+    phrase: "管理人多忙",
+    comment: "凶でも平成サイトならネタになります。"
+  }
+];
+
+function setupFortune() {
+  if (!fortuneButton) return;
+
+  fortuneButton.addEventListener("click", () => {
+    const index = Math.floor(Math.random() * fortunes.length);
+    const fortune = fortunes[index];
+
+    if (fortuneResult) fortuneResult.textContent = fortune.result;
+    if (fortuneText) fortuneText.textContent = fortune.text;
+    if (luckyColor) luckyColor.textContent = fortune.color;
+    if (luckyItem) luckyItem.textContent = fortune.item;
+    if (luckyPhrase) luckyPhrase.textContent = fortune.phrase;
+    if (fortuneComment) fortuneComment.textContent = fortune.comment;
+  });
+}
+
+setupFortune();
