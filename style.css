@@ -1350,3 +1350,127 @@ a:hover {
     justify-content: start;
   }
 }
+
+.sozai-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.sozai-sample {
+  display: grid;
+  place-items: center;
+  min-height: 90px;
+  border: 3px ridge #ffa6d3;
+  color: #d01883;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+.bg-dot {
+  background:
+    radial-gradient(circle at 8px 8px, #ff9ad1 2px, transparent 3px),
+    #fffaff;
+  background-size: 18px 18px;
+}
+
+.bg-stripe {
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      #ffe8f5,
+      #ffe8f5 8px,
+      #e9fbff 8px,
+      #e9fbff 16px
+    );
+}
+
+.bg-check {
+  background:
+    linear-gradient(45deg, #ffe8f5 25%, transparent 25%),
+    linear-gradient(-45deg, #ffe8f5 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e9fbff 75%),
+    linear-gradient(-45deg, transparent 75%, #e9fbff 75%);
+  background-size: 20px 20px;
+  background-color: #fffaff;
+}
+
+.bg-star {
+  background:
+    radial-gradient(circle at 20% 20%, #fff3a8 0 4px, transparent 5px),
+    radial-gradient(circle at 70% 40%, #ff9ad1 0 4px, transparent 5px),
+    radial-gradient(circle at 40% 75%, #a8f3ff 0 4px, transparent 5px),
+    #fffaff;
+}
+
+.line-sample {
+  height: 16px;
+  margin-bottom: 10px;
+  border: 1px solid #fff;
+  outline: 1px solid #ff75bd;
+}
+
+.line-pink {
+  background: repeating-linear-gradient(
+    90deg,
+    #ff9ad1,
+    #ff9ad1 10px,
+    #fff3f9 10px,
+    #fff3f9 20px
+  );
+}
+
+.line-blue {
+  background: repeating-linear-gradient(
+    90deg,
+    #a8f3ff,
+    #a8f3ff 10px,
+    #ffffff 10px,
+    #ffffff 20px
+  );
+}
+
+.line-yellow {
+  background: repeating-linear-gradient(
+    90deg,
+    #fff3a8,
+    #fff3a8 10px,
+    #ff9ad1 10px,
+    #ff9ad1 20px
+  );
+}
+
+.sozai-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.sozai-icon-grid div {
+  display: grid;
+  place-items: center;
+  min-height: 54px;
+  border: 2px dashed #ffafd8;
+  background: #fff8fc;
+  font-size: 28px;
+}
+
+.sozai-credit {
+  padding: 10px;
+  border: 2px dashed #ffafd8;
+  background: #fff8fc;
+}
+
+.sozai-credit p {
+  margin: 5px 0;
+}
+
+@media (max-width: 760px) {
+  .sozai-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sozai-icon-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
