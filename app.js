@@ -167,3 +167,129 @@ if (visitorCount) {
 
 setupBbs();
 setupMemo();
+
+
+const mailForm = document.getElementById("mailForm");
+const mailName = document.getElementById("mailName");
+const mailType = document.getElementById("mailType");
+const mailMessage = document.getElementById("mailMessage");
+const mailStatus = document.getElementById("mailStatus");
+const mailLogList = document.getElementById("mailLogList");
+const clapButton = document.getElementById("clapButton");
+const clapCountText = document.getElementById("clapCountText");
+
+const MAIL_LOG_KEY = "zeroRoomMailLog";
+const CLAP_COUNT_KEY = "zeroRoomClapCount";
+
+function getMailLogs() {
+  const logsJson = localStorage.getItem(MAIL_LOG_KEY);
+
+  if (!logsJson) {
+    return [];
+  }
+
+  try {
+    return JSON.parse(logsJson);
+  } catch {
+    return [];
+  }
+}
+
+function saveMailLogs(logs) {
+  localStorage.setItem(MAIL_LOG_KEY, JSON.stringify(logs));
+}
+
+function renderMailLogs() {
+  if (!mailLogList) return;
+
+  const logs = getMailLogs();
+
+  if (logs.length === 0) {
+    mailLogList.innerHTML = `<p class="small">まだメッセージはありません。</p>`;
+    return;
+  }
+
+  mailLogList.innerHTML = logs
+    .map((log) => {
+      return `
+        <article class="mail-log-item">
+          <div class="mail-log-header">
+            <span>${escapeHtml(log.name)}</span>
+            <time>${escapeHtml(log.date)}</time>
+          </div>
+          <span class="mail-log-type">${escapeHtml(log.type)}</span>
+          <p>${escapeHtml(log.message)}</p>
+        </article>
+      `;
+    })
+    .join("");
+}
+
+function setupMailForm() {
+  if (!mailForm || !mailName || !mailType || !mailMessage) return;
+
+  mailForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = mailName.value.trim() || "通りすがり";
+    const type = mailType.value;
+    const message = mailMessage.value.trim();
+
+    if (!message) {
+      alert("メッセージを書いてね");
+      return;
+    }
+
+    const logs = getMailLogs();
+
+    logs.unshift({
+      name,
+      type,
+      message,
+      date: new Date().toLocaleString("ja-JP")
+    });
+
+    saveMailLogs(logs.slice(0, 20));
+    renderMailLogs();
+
+    mailName.value = "";
+    mailMessage.value = "";
+
+    if (mailStatus) {
+      mailStatus.textContent = "送信した風に保存しました。";
+    }
+  });
+
+  renderMailLogs();
+}
+
+function getClapCount() {
+  return Number(localStorage.getItem(CLAP_COUNT_KEY) || "0");
+}
+
+function renderClapCount() {
+  if (!clapCountText) return;
+
+  const count = getClapCount();
+  clapCountText.textContent = `拍手：${count}回`;
+}
+
+function setupClapButton() {
+  if (!clapButton) return;
+
+  clapButton.addEventListener("click", () => {
+    const nextCount = getClapCount() + 1;
+    localStorage.setItem(CLAP_COUNT_KEY, String(nextCount));
+    renderClapCount();
+
+    clapButton.textContent = "👏 ありがとう！";
+    setTimeout(() => {
+      clapButton.textContent = "👏 拍手する";
+    }, 1000);
+  });
+
+  renderClapCount();
+}
+
+setupMailForm();
+setupClapButton();
