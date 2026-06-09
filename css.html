@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CSSメモ - ZERO'S ROOM</title>
+  <meta name="description" content="ZERO'S ROOMのCSSメモページです。" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page-bg css-bg">
+    <div class="site-wrap css-wrap">
+
+      <header class="site-header css-header">
+        <p class="welcome">＼ 増えすぎたCSS ／</p>
+        <h1>CSS</h1>
+        <p class="subtitle">デザインメモと平成装飾の置き場</p>
+      </header>
+
+      <nav id="globalNav" class="global-nav"></nav>
+
+      <main class="layout">
+        <aside class="side-box">
+          <section class="box">
+            <h2>CSS MENU</h2>
+            <ul class="menu-list">
+              <li><a href="#memo">CSSメモ</a></li>
+              <li><a href="#parts">装飾パーツ</a></li>
+              <li><a href="#rule">自分ルール</a></li>
+              <li><a href="#future">今後</a></li>
+            </ul>
+          </section>
+
+          <section class="box">
+            <h2>現在の状態</h2>
+            <p>
+              CSSが増えています。<br>
+              でも平成サイトなので許されます。
+            </p>
+          </section>
+        </aside>
+
+        <section class="main-box">
+
+          <section class="box css-section" id="memo">
+            <h2>CSSメモ</h2>
+
+            <div class="css-memo-list">
+              <article>
+                <h3>背景</h3>
+                <p>水玉、グラデーション、斜めストライプを多用すると平成感が出る。</p>
+              </article>
+
+              <article>
+                <h3>枠線</h3>
+                <p><code>ridge</code>、<code>double</code>、<code>dashed</code> は平成サイトの味方。</p>
+              </article>
+
+              <article>
+                <h3>色</h3>
+                <p>ピンク、水色、黄色を混ぜると一気に個人サイトっぽくなる。</p>
+              </article>
+
+              <article>
+                <h3>ナビ</h3>
+                <p>増えすぎたのでJS共通化しました。えらい。</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="box css-section" id="parts">
+            <h2>装飾パーツ見本</h2>
+
+            <div class="css-parts-grid">
+              <div class="css-sample sample-ridge">ridge枠</div>
+              <div class="css-sample sample-double">double枠</div>
+              <div class="css-sample sample-dashed">dashed枠</div>
+              <div class="css-sample sample-inset">inset枠</div>
+            </div>
+
+            <div class="css-line-demo"></div>
+
+            <p class="small">
+              このへんを使い回すと、ページ追加が少し楽になります。
+            </p>
+          </section>
+
+          <section class="box css-section" id="rule">
+            <h2>自分用CSSルール</h2>
+
+            <div class="css-rule-box">
+              <p>・背景は基本かわいくする</p>
+              <p>・枠線は遠慮しない</p>
+              <p>・スマホ対応はちゃんとする</p>
+              <p>・でも平成感は消さない</p>
+              <p>・増えすぎたら笑う</p>
+            </div>
+          </section>
+
+          <section class="box css-section" id="future">
+            <h2>今後の整理予定</h2>
+
+            <div class="css-todo-list">
+              <label><input type="checkbox" disabled checked> ナビをJS共通化する</label>
+              <label><input type="checkbox" disabled> 共通ボタンCSSをまとめる</label>
+              <label><input type="checkbox" disabled> ページ別CSSを整理する</label>
+              <label><input type="checkbox" disabled> 似てる背景を変数化する</label>
+              <label><input type="checkbox" disabled> でも平成感は残す</label>
+            </div>
+          </section>
+
+          <section class="box">
+            <h2>管理人コメント</h2>
+            <div class="owner-comment">
+              <p>
+                CSSが増えすぎている。<br>
+                でも、それだけページを増築してきた証拠でもある。
+              </p>
+              <p>
+                便利さと狂気の間で、今日も平成サイトは育っています。
+              </p>
+            </div>
+          </section>
+
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="home.html">本館に戻る</a></p>
+        <p>© ZERO'S ROOM</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
