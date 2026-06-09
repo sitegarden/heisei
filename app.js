@@ -289,21 +289,55 @@ function setupClapButton() {
   if (!clapButton) return;
 
   clapButton.addEventListener("click", () => {
-    const nextCount = getClapCount() + 1;
-    localStorage.setItem(CLAP_COUNT_KEY, String(nextCount));
-    renderClapCount();
+  const nextCount = getClapCount() + 1;
+  localStorage.setItem(CLAP_COUNT_KEY, String(nextCount));
+  renderClapCount();
+  showRandomClapMessage();
 
-    clapButton.textContent = "👏 ありがとう！";
-    setTimeout(() => {
-      clapButton.textContent = "👏 拍手する";
-    }, 1000);
-  });
+  if (clapIcon) {
+    clapIcon.classList.remove("pop");
+    void clapIcon.offsetWidth;
+    clapIcon.classList.add("pop");
+  }
+
+  clapButton.textContent = "👏 ありがとう！";
+  setTimeout(() => {
+    clapButton.textContent = "👏 拍手する";
+  }, 1000);
+});
 
   renderClapCount();
 }
 
 setupMailForm();
 setupClapButton();
+
+const clapThanksText = document.getElementById("clapThanksText");
+const clapRandomMessage = document.getElementById("clapRandomMessage");
+const clapIcon = document.querySelector(".clap-icon");
+
+const clapMessages = [
+  "拍手ありがとう。管理人が元気になりました。",
+  "見てくれてありがとう。ゆっくりしていってね。",
+  "その1クリックで、このサイトは今日も生きています。",
+  "平成の空気を感じてくれてありがとう。",
+  "また遊びに来てね。キリ番も狙っていいよ。"
+];
+
+function showRandomClapMessage() {
+  const index = Math.floor(Math.random() * clapMessages.length);
+  const message = clapMessages[index];
+
+  if (clapThanksText) {
+    clapThanksText.textContent = message;
+  }
+
+  if (clapRandomMessage) {
+    clapRandomMessage.textContent = message;
+  }
+}
+
+
 
 const voteButtons = document.querySelectorAll(".vote-button");
 const rankingList = document.getElementById("rankingList");
@@ -510,6 +544,13 @@ const sitePages = [
   url: "bbs.html",
   description: "平成サイト風の掲示板ページです。名前、タイトル、メッセージを書き込めます。",
   tags: ["BBS", "掲示板", "書き込み", "交流", "平成"]
+},
+
+  {
+  title: "Web拍手",
+  url: "clap.html",
+  description: "管理人に拍手を送る風の平成サイト風Web拍手ページです。",
+  tags: ["CLAP", "Web拍手", "拍手", "応援", "平成"]
 },
 ];
 
