@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>メール - ZERO'S ROOM</title>
+  <meta name="description" content="ZERO'S ROOMのメール・拍手ページです。" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page-bg">
+    <div class="site-wrap">
+
+      <header class="site-header">
+        <p class="welcome">＼ 管理人にひとこと ／</p>
+        <h1>MAIL</h1>
+        <p class="subtitle">メールフォーム風・Web拍手風ページ</p>
+      </header>
+
+      <nav class="global-nav">
+        <a href="home.html">HOME</a>
+        <a href="first.html">FIRST</a>
+        <a href="profile.html">PROFILE</a>
+        <a href="diary.html">DIARY</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="link.html">LINK</a>
+        <a href="mail.html">MAIL</a>
+        <a href="index.html">ENTER</a>
+      </nav>
+
+      <main class="layout">
+        <aside class="side-box">
+          <section class="box">
+            <h2>MAIL</h2>
+            <p>
+              管理人へのひとこと、応援、感想などを送れる風のページです。
+            </p>
+            <p class="small">
+              ※実際には送信されません。自分の端末にだけ保存されます。
+            </p>
+          </section>
+
+          <section class="box">
+            <h2>拍手</h2>
+            <p>
+              気に入ったら拍手してね。<br>
+              管理人がたぶん喜びます。
+            </p>
+            <button id="clapButton" class="mail-button" type="button">👏 拍手する</button>
+            <p id="clapCountText" class="small">拍手：0回</p>
+          </section>
+        </aside>
+
+        <section class="main-box">
+
+          <section class="box">
+            <h2>ひとことフォーム</h2>
+
+            <form id="mailForm" class="mail-form">
+              <label>
+                お名前
+                <input id="mailName" type="text" placeholder="通りすがり" maxlength="20" />
+              </label>
+
+              <label>
+                種類
+                <select id="mailType">
+                  <option value="感想">感想</option>
+                  <option value="応援">応援</option>
+                  <option value="報告">報告</option>
+                  <option value="その他">その他</option>
+                </select>
+              </label>
+
+              <label>
+                メッセージ
+                <textarea id="mailMessage" placeholder="ひとことどうぞ" maxlength="300"></textarea>
+              </label>
+
+              <button type="submit" class="mail-button">送信する風</button>
+            </form>
+
+            <p id="mailStatus" class="small"></p>
+          </section>
+
+          <section class="box">
+            <h2>受信箱風ログ</h2>
+            <p class="small">
+              ここに送信した風メッセージが保存されます。
+            </p>
+
+            <div id="mailLogList" class="mail-log-list"></div>
+          </section>
+
+          <section class="box">
+            <h2>Web拍手お礼</h2>
+            <div class="thanks-box">
+              <p>拍手ありがとうございます。</p>
+              <p>
+                こういう古い文化、なんか良いよな。<br>
+                小さいボタンひとつで管理人が元気になるやつ。
+              </p>
+            </div>
+          </section>
+
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="home.html">本館に戻る</a></p>
+        <p>© ZERO'S ROOM</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
