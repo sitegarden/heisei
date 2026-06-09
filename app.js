@@ -41,6 +41,7 @@ const navLinks = [
   { label: "SOZAI", url: "sozai.html" },
   { label: "CHARACTER", url: "character.html" },
   { label: "STAFF", url: "staff.html" },
+  { label: "CAT", url: "cat.html" },
 
   { label: "NEW", url: "new.html" },
   { label: "HISTORY", url: "history.html" },
@@ -687,6 +688,12 @@ const sitePages = [
   url: "event.html",
   description: "記念企画、お題配布、配布物風、過去企画をまとめたイベントページです。",
   tags: ["EVENT", "企画", "イベント", "お題", "配布", "記念企画"]
+},
+  {
+  title: "猫の部屋",
+  url: "cat.html",
+  description: "くーちゃんとごまちゃんを紹介する猫スタッフページです。",
+  tags: ["CAT", "猫", "くーちゃん", "ごまちゃん", "ペット", "猫スタッフ"]
 },
 ];
 
