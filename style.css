@@ -1917,3 +1917,146 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.union-page-bg {
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.9) 2px, transparent 3px),
+    linear-gradient(135deg, #ffe6f4, #fff6bd 45%, #e8f7ff);
+  background-size: 24px 24px, 100% 100%;
+}
+
+.union-wrap {
+  border-color: #ff75bd;
+  box-shadow: 0 0 22px rgba(255, 117, 189, 0.45);
+}
+
+.union-header {
+  background:
+    linear-gradient(90deg, #ff75bd, #fff3a8, #a8f3ff);
+  border-bottom-color: #ff75bd;
+}
+
+.union-section p {
+  line-height: 1.8;
+}
+
+.union-join-box {
+  padding: 12px;
+  border: 2px dashed #ffafd8;
+  background: #fff8fc;
+}
+
+.union-join-box p {
+  margin: 5px 0;
+}
+
+.union-banner-room {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.union88 {
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 31px;
+  border: 2px solid #fff;
+  outline: 1px solid #ff1493;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 0 #5b3b55;
+}
+
+.union88.pink {
+  background: linear-gradient(90deg, #ff75bd, #ffc4e4);
+}
+
+.union88.blue {
+  background: linear-gradient(90deg, #5ecbff, #b8f1ff);
+}
+
+.union88.yellow {
+  background: linear-gradient(90deg, #ffd84d, #ffb347);
+}
+
+.union88.purple {
+  background: linear-gradient(90deg, #8b5cc2, #c99cff);
+}
+
+.union88.green {
+  background: linear-gradient(90deg, #63d889, #b8ffd0);
+}
+
+.union88.orange {
+  background: linear-gradient(90deg, #ff9b54, #ffd2a6);
+}
+
+.union88.black {
+  background: linear-gradient(90deg, #2d1436, #8b5cc2);
+}
+
+.union88.rainbow {
+  background: linear-gradient(90deg, #ff75bd, #ffd84d, #63d889, #5ecbff);
+}
+
+.union-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.union-form input {
+  width: 100%;
+  padding: 8px;
+  border: 2px inset #ffafd8;
+  background: #fffaff;
+  color: #5b3b55;
+  font-family: inherit;
+}
+
+.union-form button {
+  padding: 8px 14px;
+  border: 2px outset #ffc0df;
+  background: linear-gradient(#ffffff, #ffe1f2);
+  color: #d01883;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.union-form button:hover {
+  border-style: inset;
+  background: #fff7ce;
+}
+
+.union-member-list {
+  display: grid;
+  gap: 8px;
+}
+
+.union-member {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 8px;
+  border: 2px dashed #ffafd8;
+  background: #fff8fc;
+}
+
+.union-member strong {
+  color: #d01883;
+}
+
+@media (max-width: 760px) {
+  .union-form {
+    grid-template-columns: 1fr;
+  }
+
+  .union-member {
+    grid-template-columns: 1fr;
+  }
+}
