@@ -1285,3 +1285,68 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.history-list {
+  display: grid;
+  gap: 10px;
+}
+
+.history-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+  padding: 10px;
+  border: 2px dashed #ffafd8;
+  background:
+    linear-gradient(rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
+    repeating-linear-gradient(
+      -45deg,
+      #ffe8f5,
+      #ffe8f5 8px,
+      #e9fbff 8px,
+      #e9fbff 16px
+    );
+}
+
+.history-item.new {
+  border-color: #ff1493;
+  background:
+    linear-gradient(rgba(255,247,206,0.84), rgba(255,255,255,0.94)),
+    repeating-linear-gradient(
+      -45deg,
+      #ffe8f5,
+      #ffe8f5 8px,
+      #e9fbff 8px,
+      #e9fbff 16px
+    );
+}
+
+.history-date {
+  display: grid;
+  place-items: center;
+  padding: 8px;
+  border: 2px ridge #ffa6d3;
+  background: #fffaff;
+  color: #ff1493;
+  font-weight: bold;
+  text-align: center;
+}
+
+.history-body h3 {
+  margin: 0 0 6px;
+  color: #d01883;
+}
+
+.history-body p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .history-item {
+    grid-template-columns: 1fr;
+  }
+
+  .history-date {
+    justify-content: start;
+  }
+}
