@@ -1816,3 +1816,104 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.fortune-bg {
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.9) 2px, transparent 3px),
+    linear-gradient(135deg, #fff6bd, #e8f7ff 45%, #ffe6f4);
+  background-size: 24px 24px, 100% 100%;
+}
+
+.fortune-wrap {
+  border-color: #ffd84d;
+  box-shadow: 0 0 22px rgba(255, 216, 77, 0.5);
+}
+
+.fortune-header {
+  background:
+    linear-gradient(90deg, #ffd84d, #ffb6dd, #a8f3ff);
+  border-bottom-color: #ffd84d;
+}
+
+.fortune-section p {
+  line-height: 1.8;
+}
+
+.fortune-card {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding: 18px;
+  border: 3px ridge #ffd84d;
+  background:
+    linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+    repeating-linear-gradient(
+      -45deg,
+      #fff7ce,
+      #fff7ce 8px,
+      #ffe8f5 8px,
+      #ffe8f5 16px
+    );
+  text-align: center;
+}
+
+.fortune-result {
+  display: grid;
+  place-items: center;
+  width: 140px;
+  height: 140px;
+  border: 4px double #ff75bd;
+  border-radius: 50%;
+  background: #fffaff;
+  color: #ff1493;
+  font-size: 34px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+.fortune-button {
+  padding: 8px 18px;
+  border: 2px outset #ffc0df;
+  background: linear-gradient(#ffffff, #ffe1f2);
+  color: #d01883;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.fortune-button:hover {
+  border-style: inset;
+  background: #fff7ce;
+}
+
+.lucky-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+
+.lucky-grid div {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border: 3px ridge #ffd84d;
+  background: #fffaff;
+  text-align: center;
+}
+
+.lucky-grid span {
+  color: #8a6b84;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.lucky-grid strong {
+  color: #d01883;
+  font-size: 16px;
+}
+
+@media (max-width: 760px) {
+  .lucky-grid {
+    grid-template-columns: 1fr;
+  }
+}
