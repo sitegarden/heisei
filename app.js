@@ -558,6 +558,12 @@ const sitePages = [
   description: "来てくれてありがとう、拍手ありがとうを伝えるお礼ページです。",
   tags: ["THANKS", "ありがとう", "お礼", "拍手", "来訪"]
 },
+  {
+  title: "好きなもの",
+  url: "favorite.html",
+  description: "管理人の好きな飲み物、創作、サイト文化、好きな言葉をまとめたページです。",
+  tags: ["FAVORITE", "好きなもの", "紅茶", "創作", "個人サイト"]
+},
 ];
 
 function renderSearchResults(results) {
