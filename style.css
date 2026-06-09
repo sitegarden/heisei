@@ -2448,3 +2448,95 @@ a:hover {
     display: block;
   }
 }
+
+.thanks-bg {
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.9) 2px, transparent 3px),
+    linear-gradient(135deg, #ffe6f4, #fff6bd 45%, #e8f7ff);
+  background-size: 24px 24px, 100% 100%;
+}
+
+.thanks-wrap {
+  border-color: #ff75bd;
+  box-shadow: 0 0 22px rgba(255, 117, 189, 0.45);
+}
+
+.thanks-header {
+  background:
+    linear-gradient(90deg, #ff75bd, #fff3a8, #a8f3ff);
+  border-bottom-color: #ff75bd;
+}
+
+.thanks-main-box {
+  text-align: center;
+}
+
+.thanks-heart {
+  display: grid;
+  place-items: center;
+  width: 140px;
+  height: 140px;
+  margin: 12px auto;
+  border: 4px double #ff75bd;
+  border-radius: 50%;
+  background: #fff7ce;
+  font-size: 64px;
+  animation: thanksPulse 1.2s ease-in-out infinite;
+}
+
+@keyframes thanksPulse {
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.thanks-message {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 2px dashed #ffafd8;
+  background: #fff8fc;
+  color: #d01883;
+  font-weight: bold;
+}
+
+.thanks-link-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.thanks-link-buttons a {
+  padding: 8px 14px;
+  border: 2px outset #ffc0df;
+  background: linear-gradient(#ffffff, #ffe1f2);
+  color: #d01883;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.thanks-link-buttons a:hover {
+  border-style: inset;
+  background: #fff7ce;
+}
+
+.thanks-illust-frame {
+  display: grid;
+  place-items: center;
+  min-height: 220px;
+  border: 3px ridge #ff75bd;
+  background:
+    linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.82)),
+    repeating-linear-gradient(
+      -45deg,
+      #ffe8f5,
+      #ffe8f5 8px,
+      #e9fbff 8px,
+      #e9fbff 16px
+    );
+  color: #ff1493;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #fff;
+}
