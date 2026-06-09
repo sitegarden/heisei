@@ -2110,3 +2110,114 @@ a:hover {
 .qa-list p {
   margin: 0;
 }
+
+.game-bg {
+  background:
+    radial-gradient(circle at 12px 12px, rgba(255,255,255,0.9) 2px, transparent 3px),
+    linear-gradient(135deg, #e8f7ff, #fff6bd 45%, #ffe6f4);
+  background-size: 24px 24px, 100% 100%;
+}
+
+.game-wrap {
+  border-color: #73d6ff;
+  box-shadow: 0 0 22px rgba(115, 214, 255, 0.45);
+}
+
+.game-header {
+  background:
+    linear-gradient(90deg, #73d6ff, #fff3a8, #ffb6dd);
+  border-bottom-color: #73d6ff;
+}
+
+.game-card {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 18px;
+  border: 3px ridge #73d6ff;
+  background:
+    linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+    repeating-linear-gradient(
+      -45deg,
+      #e9fbff,
+      #e9fbff 8px,
+      #ffe8f5 8px,
+      #ffe8f5 16px
+    );
+  text-align: center;
+}
+
+.game-star {
+  display: grid;
+  place-items: center;
+  width: 130px;
+  height: 130px;
+  border: 4px double #ff75bd;
+  border-radius: 50%;
+  background: #fff7ce;
+  color: #ff1493;
+  font-size: 72px;
+  line-height: 1;
+  text-shadow:
+    2px 2px 0 #fff,
+    4px 4px 0 #73d6ff;
+  user-select: none;
+}
+
+.game-star.pop {
+  animation: starPop 0.25s ease;
+}
+
+@keyframes starPop {
+  50% {
+    transform: scale(1.18) rotate(8deg);
+  }
+}
+
+.game-score {
+  margin: 0;
+  color: #d01883;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.game-message {
+  margin: 0;
+  padding: 8px 14px;
+  border: 2px dashed #ffafd8;
+  background: #fff8fc;
+  color: #5b3b55;
+  font-weight: bold;
+}
+
+.game-button,
+.game-reset-button {
+  padding: 8px 18px;
+  border: 2px outset #ffc0df;
+  background: linear-gradient(#ffffff, #ffe1f2);
+  color: #d01883;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.game-button:hover,
+.game-reset-button:hover {
+  border-style: inset;
+  background: #fff7ce;
+}
+
+.game-reset-button {
+  font-size: 12px;
+}
+
+.game-record-box {
+  padding: 12px;
+  border: 2px dashed #ffafd8;
+  background: #fff8fc;
+}
+
+.game-record-box p {
+  margin: 6px 0;
+  font-weight: bold;
+}
