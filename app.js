@@ -429,7 +429,21 @@ const sitePages = [
     url: "ranking.html",
     description: "平成サイトにありがちなランキング参加中っぽいページです。",
     tags: ["RANKING", "ランキング", "投票", "応援"]
-  }
+  },
+
+  {
+  title: "更新履歴",
+  url: "history.html",
+  description: "ZERO'S ROOMの更新履歴ページです。サイトの増築記録をまとめています。",
+  tags: ["HISTORY", "更新履歴", "更新", "ログ", "増築"]
+},
+
+  {
+  title: "素材",
+  url: "sozai.html",
+  description: "背景、ライン、アイコン、バナー素材風のページです。",
+  tags: ["SOZAI", "素材", "背景", "バナー", "アイコン"]
+}
 ];
 
 function renderSearchResults(results) {
