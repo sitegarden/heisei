@@ -6,6 +6,7 @@ const bbsList = document.getElementById("bbsList");
 const ownerMemo = document.getElementById("ownerMemo");
 const saveMemoButton = document.getElementById("saveMemoButton");
 const memoStatus = document.getElementById("memoStatus");
+const bbsTitle = document.getElementById("bbsTitle");
 
 const COUNTER_KEY = "zeroRoomVisitorCount";
 const BBS_KEY = "zeroRoomBbsPosts";
@@ -87,36 +88,40 @@ function renderBbsPosts() {
   }
 
   bbsList.innerHTML = posts
-    .map((post) => {
+    .map((post, index) => {
       return `
         <article class="bbs-item">
-          <div class="bbs-item-header">
-            <span>${escapeHtml(post.name)}</span>
-            <time>${escapeHtml(post.date)}</time>
+          <h3 class="bbs-item-title">
+            <span class="bbs-item-number">No.${posts.length - index}</span>
+            ${escapeHtml(post.title || "無題")}
+          </h3>
+
+          <div class="bbs-item-meta">
+            投稿者：${escapeHtml(post.name)} / ${escapeHtml(post.date)}
           </div>
+
           <p>${escapeHtml(post.message)}</p>
         </article>
       `;
     })
     .join("");
 }
-
-function addBbsPost(name, message) {
+function addBbsPost(name, title, message) {
   const posts = getBbsPosts();
 
   const newPost = {
     name,
+    title: title || "無題",
     message,
     date: new Date().toLocaleString("ja-JP")
   };
 
   posts.unshift(newPost);
 
-  const limitedPosts = posts.slice(0, 10);
+  const limitedPosts = posts.slice(0, 20);
   saveBbsPosts(limitedPosts);
   renderBbsPosts();
 }
-
 function setupBbs() {
   if (!bbsForm || !bbsName || !bbsMessage) return;
 
@@ -124,16 +129,22 @@ function setupBbs() {
     event.preventDefault();
 
     const name = bbsName.value.trim() || "通りすがり";
+    const title = bbsTitle ? bbsTitle.value.trim() : "無題";
     const message = bbsMessage.value.trim();
 
     if (!message) {
-      alert("ひとことを書いてね");
+      alert("メッセージを書いてね");
       return;
     }
 
-    addBbsPost(name, message);
+    addBbsPost(name, title, message);
 
     bbsName.value = "";
+
+    if (bbsTitle) {
+      bbsTitle.value = "";
+    }
+
     bbsMessage.value = "";
   });
 
@@ -492,6 +503,13 @@ const sitePages = [
   url: "game.html",
   description: "星を集めるだけの平成サイト風ミニゲームページです。",
   tags: ["GAME", "ゲーム", "ミニゲーム", "星", "スコア"]
+},
+
+  {
+  title: "掲示板",
+  url: "bbs.html",
+  description: "平成サイト風の掲示板ページです。名前、タイトル、メッセージを書き込めます。",
+  tags: ["BBS", "掲示板", "書き込み", "交流", "平成"]
 },
 ];
 
