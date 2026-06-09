@@ -938,3 +938,117 @@ a:hover {
       #e9fbff 16px
     );
 }
+
+.mail-form {
+  display: grid;
+  gap: 12px;
+}
+
+.mail-form label {
+  display: grid;
+  gap: 5px;
+  color: #d01883;
+  font-weight: bold;
+}
+
+.mail-form input,
+.mail-form select,
+.mail-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 2px inset #ffafd8;
+  background: #fffaff;
+  color: #5b3b55;
+  font-family: inherit;
+}
+
+.mail-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.mail-button {
+  justify-self: start;
+  padding: 7px 16px;
+  border: 2px outset #ffc0df;
+  background: linear-gradient(#ffffff, #ffe1f2);
+  color: #d01883;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.mail-button:hover {
+  border-style: inset;
+  background: #fff7ce;
+}
+
+.mail-log-list {
+  display: grid;
+  gap: 10px;
+}
+
+.mail-log-item {
+  padding: 10px;
+  border: 2px dashed #ffafd8;
+  background:
+    linear-gradient(rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
+    repeating-linear-gradient(
+      -45deg,
+      #ffe8f5,
+      #ffe8f5 8px,
+      #e9fbff 8px,
+      #e9fbff 16px
+    );
+}
+
+.mail-log-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+  color: #d01883;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.mail-log-type {
+  display: inline-block;
+  margin-bottom: 6px;
+  padding: 3px 8px;
+  border: 1px dashed #ff75bd;
+  background: #fff7ce;
+  color: #d01883;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.mail-log-item p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.thanks-box {
+  padding: 14px;
+  border: 3px ridge #ffa6d3;
+  background:
+    linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+    repeating-linear-gradient(
+      -45deg,
+      #ffe8f5,
+      #ffe8f5 8px,
+      #e9fbff 8px,
+      #e9fbff 16px
+    );
+  text-align: center;
+}
+
+.thanks-box p {
+  margin: 0 0 8px;
+}
+
+@media (max-width: 760px) {
+  .mail-log-header {
+    display: block;
+  }
+}
