@@ -724,3 +724,90 @@ a:hover {
     text-align: left;
   }
 }
+
+
+.gallery-room-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 11px;
+}
+
+.gallery-card {
+  padding: 10px;
+  border: 3px ridge #ffa6d3;
+  background: #fff8fc;
+}
+
+.gallery-card h3 {
+  margin: 8px 0 5px;
+  color: #d01883;
+}
+
+.gallery-card p {
+  margin: 0 0 8px;
+  font-size: 13px;
+}
+
+.gallery-card span {
+  color: #8a6b84;
+  font-size: 12px;
+}
+
+.gallery-image {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 2px dashed #ffafd8;
+  background:
+    linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+    repeating-linear-gradient(
+      -45deg,
+      #ffe8f5,
+      #ffe8f5 8px,
+      #e9fbff 8px,
+      #e9fbff 16px
+    );
+  color: #c06a9a;
+  font-weight: bold;
+}
+
+.gallery-image img,
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-banner-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.work-log-list {
+  display: grid;
+  gap: 10px;
+}
+
+.work-log-card {
+  padding: 12px;
+  border: 2px dashed #ffafd8;
+  background: #fffaff;
+}
+
+.work-log-card h3 {
+  margin: 0 0 6px;
+  color: #d01883;
+}
+
+.work-log-card p {
+  margin: 0 0 8px;
+}
+
+@media (max-width: 760px) {
+  .gallery-room-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
