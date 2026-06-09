@@ -444,3 +444,28 @@ a:hover {
   color: #8a6b84;
   font-size: 12px;
 }
+
+.single-page {
+  padding: 14px;
+}
+
+.site-link-card {
+  margin-bottom: 12px;
+  padding: 12px;
+  border: 2px dashed #ffafd8;
+  background: #fff8fc;
+}
+
+.site-link-card h3 {
+  margin: 0 0 6px;
+  color: #d01883;
+}
+
+.site-link-card p {
+  margin: 0 0 8px;
+}
+
+.banner-list {
+  display: grid;
+  gap: 8px;
+}
