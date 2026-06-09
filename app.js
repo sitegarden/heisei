@@ -576,6 +576,12 @@ const sitePages = [
   description: "増えすぎたページをまとめた案内板です。各ページへ移動できます。",
   tags: ["MAP", "サイトマップ", "案内", "ページ一覧", "迷子"]
 },
+  {
+  title: "新着情報",
+  url: "new.html",
+  description: "最近追加されたページやおすすめページ、お知らせをまとめた新着情報ページです。",
+  tags: ["NEW", "新着", "最新", "お知らせ", "おすすめ"]
+},
 ];
 
 function renderSearchResults(results) {
