@@ -464,6 +464,12 @@ const sitePages = [
   url: "fortune.html",
   description: "おみくじ、ラッキーアイテム、今日のひとことを表示する占いページです。",
   tags: ["FORTUNE", "占い", "おみくじ", "ラッキーアイテム"]
+},
+  {
+  title: "100の質問",
+  url: "question.html",
+  description: "管理人への100の質問風ページです。基本、サイト、好きなもの、自由回答があります。",
+  tags: ["QUESTION", "質問", "100の質問", "管理人", "プロフィール"]
 }
 ];
 
