@@ -12,6 +12,72 @@ const COUNTER_KEY = "zeroRoomVisitorCount";
 const BBS_KEY = "zeroRoomBbsPosts";
 const MEMO_KEY = "zeroRoomOwnerMemo";
 
+
+
+
+const globalNav = document.getElementById("globalNav");
+
+const navLinks = [
+  { label: "HOME", url: "home.html" },
+  { label: "FIRST", url: "first.html" },
+  { label: "PROFILE", url: "profile.html" },
+  { label: "DIARY", url: "diary.html" },
+  { label: "GALLERY", url: "gallery.html" },
+  { label: "LINK", url: "link.html" },
+  { label: "MAP", url: "map.html" },
+  { label: "SEARCH", url: "search.html" },
+
+  { label: "BBS", url: "bbs.html" },
+  { label: "CLAP", url: "clap.html" },
+  { label: "GUESTBOOK", url: "guestbook.html" },
+  { label: "MAIL", url: "mail.html" },
+
+  { label: "MUSIC", url: "music.html" },
+  { label: "MIDI", url: "midi.html" },
+  { label: "GAME", url: "game.html" },
+  { label: "FORTUNE", url: "fortune.html" },
+
+  { label: "UNION", url: "union.html" },
+  { label: "SOZAI", url: "sozai.html" },
+  { label: "CHARACTER", url: "character.html" },
+  { label: "STAFF", url: "staff.html" },
+
+  { label: "NEW", url: "new.html" },
+  { label: "HISTORY", url: "history.html" },
+  { label: "OLD", url: "old.html" },
+  { label: "ANNEX", url: "annex.html" },
+  { label: "WAREHOUSE", url: "warehouse.html" },
+
+  { label: "QUESTION", url: "question.html" },
+  { label: "FAVORITE", url: "favorite.html" },
+  { label: "DREAM", url: "dream.html" },
+  { label: "MEMO", url: "memo.html" },
+  { label: "ROOM", url: "room.html" },
+  { label: "EVENT", url: "event.html" },
+
+  { label: "ENTER", url: "index.html" }
+];
+
+function setupGlobalNav() {
+  if (!globalNav) return;
+
+  const currentPage = location.pathname.split("/").pop() || "index.html";
+
+  globalNav.innerHTML = navLinks
+    .map((link) => {
+      const isCurrent = link.url === currentPage;
+      const currentClass = isCurrent ? " current" : "";
+
+      return `<a class="${currentClass}" href="${link.url}">${link.label}</a>`;
+    })
+    .join("");
+}
+
+setupGlobalNav();
+
+
+
+
 function createFakeCounter() {
   const savedCount = localStorage.getItem(COUNTER_KEY);
 
