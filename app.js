@@ -570,6 +570,12 @@ const sitePages = [
   description: "管理人のやりたいこと、制作予定、目標をまとめたページです。",
   tags: ["DREAM", "夢", "予定", "目標", "制作予定", "やりたいこと"]
 },
+  {
+  title: "サイトマップ",
+  url: "map.html",
+  description: "増えすぎたページをまとめた案内板です。各ページへ移動できます。",
+  tags: ["MAP", "サイトマップ", "案内", "ページ一覧", "迷子"]
+},
 ];
 
 function renderSearchResults(results) {
